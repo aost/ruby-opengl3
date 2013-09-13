@@ -1,0 +1,16 @@
+---
+name: GL_VERSION_1_4_ARB_imaging
+version: [1, 4]
+constants:
+- GL_FUNC_ADD
+- GL_FUNC_SUBTRACT
+- GL_FUNC_REVERSE_SUBTRACT
+- GL_MIN
+- GL_MAX
+- GL_CONSTANT_COLOR
+- GL_ONE_MINUS_CONSTANT_COLOR
+- GL_CONSTANT_ALPHA
+- GL_ONE_MINUS_CONSTANT_ALPHA
+functions:
+- glBlendColor
+- glBlendEquation

@@ -1,0 +1,5671 @@
+---
+glAccum:
+  return_type: [void]
+  parameters:
+  - [GLenum, op]
+  - [GLfloat, value]
+glActiveShaderProgram:
+  return_type: [void]
+  parameters:
+  - [GLuint, pipeline]
+  - [GLuint, program]
+glActiveTexture:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+glAlphaFunc:
+  return_type: [void]
+  parameters:
+  - [GLenum, func]
+  - [GLfloat, ref]
+glAreTexturesResident:
+  return_type: [GLboolean]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', textures]
+  - [GLboolean, '*', residences]
+glArrayElement:
+  return_type: [void]
+  parameters:
+  - [GLint, i]
+glAttachShader:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, shader]
+glBegin:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glBeginConditionalRender:
+  return_type: [void]
+  parameters:
+  - [GLuint, id]
+  - [GLenum, mode]
+glBeginQuery:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, id]
+glBeginQueryIndexed:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLuint, id]
+glBeginTransformFeedback:
+  return_type: [void]
+  parameters:
+  - [GLenum, primitiveMode]
+glBindAttribLocation:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, index]
+  - [const, GLchar, '*', name]
+glBindBuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, buffer]
+glBindBufferBase:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLuint, buffer]
+glBindBufferRange:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLuint, buffer]
+  - [GLintptr, offset]
+  - [GLsizeiptr, size]
+glBindBuffersBase:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLuint, '*', buffers]
+glBindBuffersRange:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLuint, '*', buffers]
+  - [const, GLintptr, '*', offsets]
+  - [const, GLsizeiptr, '*', sizes]
+glBindFragDataLocation:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, color]
+  - [const, GLchar, '*', name]
+glBindFragDataLocationIndexed:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, colorNumber]
+  - [GLuint, index]
+  - [const, GLchar, '*', name]
+glBindFramebuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, framebuffer]
+glBindImageTexture:
+  return_type: [void]
+  parameters:
+  - [GLuint, unit]
+  - [GLuint, texture]
+  - [GLint, level]
+  - [GLboolean, layered]
+  - [GLint, layer]
+  - [GLenum, access]
+  - [GLenum, format]
+glBindImageTextures:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLuint, '*', textures]
+glBindProgramPipeline:
+  return_type: [void]
+  parameters:
+  - [GLuint, pipeline]
+glBindRenderbuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, renderbuffer]
+glBindSampler:
+  return_type: [void]
+  parameters:
+  - [GLuint, unit]
+  - [GLuint, sampler]
+glBindSamplers:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLuint, '*', samplers]
+glBindTexture:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, texture]
+glBindTextures:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLuint, '*', textures]
+glBindTransformFeedback:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, id]
+glBindVertexArray:
+  return_type: [void]
+  parameters:
+  - [GLuint, array]
+glBindVertexBuffer:
+  return_type: [void]
+  parameters:
+  - [GLuint, bindingindex]
+  - [GLuint, buffer]
+  - [GLintptr, offset]
+  - [GLsizei, stride]
+glBindVertexBuffers:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLuint, '*', buffers]
+  - [const, GLintptr, '*', offsets]
+  - [const, GLsizei, '*', strides]
+glBitmap:
+  return_type: [void]
+  parameters:
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLfloat, xorig]
+  - [GLfloat, yorig]
+  - [GLfloat, xmove]
+  - [GLfloat, ymove]
+  - [const, GLubyte, '*', bitmap]
+glBlendColor:
+  return_type: [void]
+  parameters:
+  - [GLfloat, red]
+  - [GLfloat, green]
+  - [GLfloat, blue]
+  - [GLfloat, alpha]
+glBlendEquation:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glBlendEquationSeparate:
+  return_type: [void]
+  parameters:
+  - [GLenum, modeRGB]
+  - [GLenum, modeAlpha]
+glBlendEquationSeparatei:
+  return_type: [void]
+  parameters:
+  - [GLuint, buf]
+  - [GLenum, modeRGB]
+  - [GLenum, modeAlpha]
+glBlendEquationi:
+  return_type: [void]
+  parameters:
+  - [GLuint, buf]
+  - [GLenum, mode]
+glBlendFunc:
+  return_type: [void]
+  parameters:
+  - [GLenum, sfactor]
+  - [GLenum, dfactor]
+glBlendFuncSeparate:
+  return_type: [void]
+  parameters:
+  - [GLenum, sfactorRGB]
+  - [GLenum, dfactorRGB]
+  - [GLenum, sfactorAlpha]
+  - [GLenum, dfactorAlpha]
+glBlendFuncSeparatei:
+  return_type: [void]
+  parameters:
+  - [GLuint, buf]
+  - [GLenum, srcRGB]
+  - [GLenum, dstRGB]
+  - [GLenum, srcAlpha]
+  - [GLenum, dstAlpha]
+glBlendFunci:
+  return_type: [void]
+  parameters:
+  - [GLuint, buf]
+  - [GLenum, src]
+  - [GLenum, dst]
+glBlitFramebuffer:
+  return_type: [void]
+  parameters:
+  - [GLint, srcX0]
+  - [GLint, srcY0]
+  - [GLint, srcX1]
+  - [GLint, srcY1]
+  - [GLint, dstX0]
+  - [GLint, dstY0]
+  - [GLint, dstX1]
+  - [GLint, dstY1]
+  - [GLbitfield, mask]
+  - [GLenum, filter]
+glBufferData:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizeiptr, size]
+  - [const, GLvoid, '*', data]
+  - [GLenum, usage]
+glBufferStorage:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizeiptr, size]
+  - [const, void, '*', data]
+  - [GLbitfield, flags]
+glBufferSubData:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLintptr, offset]
+  - [GLsizeiptr, size]
+  - [const, GLvoid, '*', data]
+glCallList:
+  return_type: [void]
+  parameters:
+  - [GLuint, list]
+glCallLists:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLenum, type]
+  - [const, GLvoid, '*', lists]
+glCheckFramebufferStatus:
+  return_type: [GLenum]
+  parameters:
+  - [GLenum, target]
+glClampColor:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, clamp]
+glClear:
+  return_type: [void]
+  parameters:
+  - [GLbitfield, mask]
+glClearAccum:
+  return_type: [void]
+  parameters:
+  - [GLfloat, red]
+  - [GLfloat, green]
+  - [GLfloat, blue]
+  - [GLfloat, alpha]
+glClearBufferData:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, void, '*', data]
+glClearBufferSubData:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLintptr, offset]
+  - [GLsizeiptr, size]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, void, '*', data]
+glClearBufferfi:
+  return_type: [void]
+  parameters:
+  - [GLenum, buffer]
+  - [GLint, drawbuffer]
+  - [GLfloat, depth]
+  - [GLint, stencil]
+glClearBufferfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, buffer]
+  - [GLint, drawbuffer]
+  - [const, GLfloat, '*', value]
+glClearBufferiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, buffer]
+  - [GLint, drawbuffer]
+  - [const, GLint, '*', value]
+glClearBufferuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, buffer]
+  - [GLint, drawbuffer]
+  - [const, GLuint, '*', value]
+glClearColor:
+  return_type: [void]
+  parameters:
+  - [GLfloat, red]
+  - [GLfloat, green]
+  - [GLfloat, blue]
+  - [GLfloat, alpha]
+glClearDepth:
+  return_type: [void]
+  parameters:
+  - [GLdouble, depth]
+glClearDepthf:
+  return_type: [void]
+  parameters:
+  - [GLfloat, d]
+glClearIndex:
+  return_type: [void]
+  parameters:
+  - [GLfloat, c]
+glClearStencil:
+  return_type: [void]
+  parameters:
+  - [GLint, s]
+glClearTexImage:
+  return_type: [void]
+  parameters:
+  - [GLuint, texture]
+  - [GLint, level]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, void, '*', data]
+glClearTexSubImage:
+  return_type: [void]
+  parameters:
+  - [GLuint, texture]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLint, zoffset]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, void, '*', data]
+glClientActiveTexture:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+glClientWaitSync:
+  return_type: [GLenum]
+  parameters:
+  - [GLsync, sync]
+  - [GLbitfield, flags]
+  - [GLuint64, timeout]
+glClipPlane:
+  return_type: [void]
+  parameters:
+  - [GLenum, plane]
+  - [const, GLdouble, '*', equation]
+glColor3b:
+  return_type: [void]
+  parameters:
+  - [GLbyte, red]
+  - [GLbyte, green]
+  - [GLbyte, blue]
+glColor3bv:
+  return_type: [void]
+  parameters:
+  - [const, GLbyte, '*', v]
+glColor3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, red]
+  - [GLdouble, green]
+  - [GLdouble, blue]
+glColor3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glColor3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, red]
+  - [GLfloat, green]
+  - [GLfloat, blue]
+glColor3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glColor3i:
+  return_type: [void]
+  parameters:
+  - [GLint, red]
+  - [GLint, green]
+  - [GLint, blue]
+glColor3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glColor3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, red]
+  - [GLshort, green]
+  - [GLshort, blue]
+glColor3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glColor3ub:
+  return_type: [void]
+  parameters:
+  - [GLubyte, red]
+  - [GLubyte, green]
+  - [GLubyte, blue]
+glColor3ubv:
+  return_type: [void]
+  parameters:
+  - [const, GLubyte, '*', v]
+glColor3ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, red]
+  - [GLuint, green]
+  - [GLuint, blue]
+glColor3uiv:
+  return_type: [void]
+  parameters:
+  - [const, GLuint, '*', v]
+glColor3us:
+  return_type: [void]
+  parameters:
+  - [GLushort, red]
+  - [GLushort, green]
+  - [GLushort, blue]
+glColor3usv:
+  return_type: [void]
+  parameters:
+  - [const, GLushort, '*', v]
+glColor4b:
+  return_type: [void]
+  parameters:
+  - [GLbyte, red]
+  - [GLbyte, green]
+  - [GLbyte, blue]
+  - [GLbyte, alpha]
+glColor4bv:
+  return_type: [void]
+  parameters:
+  - [const, GLbyte, '*', v]
+glColor4d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, red]
+  - [GLdouble, green]
+  - [GLdouble, blue]
+  - [GLdouble, alpha]
+glColor4dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glColor4f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, red]
+  - [GLfloat, green]
+  - [GLfloat, blue]
+  - [GLfloat, alpha]
+glColor4fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glColor4i:
+  return_type: [void]
+  parameters:
+  - [GLint, red]
+  - [GLint, green]
+  - [GLint, blue]
+  - [GLint, alpha]
+glColor4iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glColor4s:
+  return_type: [void]
+  parameters:
+  - [GLshort, red]
+  - [GLshort, green]
+  - [GLshort, blue]
+  - [GLshort, alpha]
+glColor4sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glColor4ub:
+  return_type: [void]
+  parameters:
+  - [GLubyte, red]
+  - [GLubyte, green]
+  - [GLubyte, blue]
+  - [GLubyte, alpha]
+glColor4ubv:
+  return_type: [void]
+  parameters:
+  - [const, GLubyte, '*', v]
+glColor4ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, red]
+  - [GLuint, green]
+  - [GLuint, blue]
+  - [GLuint, alpha]
+glColor4uiv:
+  return_type: [void]
+  parameters:
+  - [const, GLuint, '*', v]
+glColor4us:
+  return_type: [void]
+  parameters:
+  - [GLushort, red]
+  - [GLushort, green]
+  - [GLushort, blue]
+  - [GLushort, alpha]
+glColor4usv:
+  return_type: [void]
+  parameters:
+  - [const, GLushort, '*', v]
+glColorMask:
+  return_type: [void]
+  parameters:
+  - [GLboolean, red]
+  - [GLboolean, green]
+  - [GLboolean, blue]
+  - [GLboolean, alpha]
+glColorMaski:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLboolean, r]
+  - [GLboolean, g]
+  - [GLboolean, b]
+  - [GLboolean, a]
+glColorMaterial:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, mode]
+glColorP3ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, color]
+glColorP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', color]
+glColorP4ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, color]
+glColorP4uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', color]
+glColorPointer:
+  return_type: [void]
+  parameters:
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glColorSubTable:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, start]
+  - [GLsizei, count]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', data]
+glColorTable:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', table]
+glColorTableParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glColorTableParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glCompileShader:
+  return_type: [void]
+  parameters:
+  - [GLuint, shader]
+glCompressedTexImage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLint, border]
+  - [GLsizei, imageSize]
+  - [const, GLvoid, '*', data]
+glCompressedTexImage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLint, border]
+  - [GLsizei, imageSize]
+  - [const, GLvoid, '*', data]
+glCompressedTexImage3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLint, border]
+  - [GLsizei, imageSize]
+  - [const, GLvoid, '*', data]
+glCompressedTexSubImage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLsizei, width]
+  - [GLenum, format]
+  - [GLsizei, imageSize]
+  - [const, GLvoid, '*', data]
+glCompressedTexSubImage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, format]
+  - [GLsizei, imageSize]
+  - [const, GLvoid, '*', data]
+glCompressedTexSubImage3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLint, zoffset]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLenum, format]
+  - [GLsizei, imageSize]
+  - [const, GLvoid, '*', data]
+glConvolutionFilter1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', image]
+glConvolutionFilter2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', image]
+glConvolutionParameterf:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, params]
+glConvolutionParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glConvolutionParameteri:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, params]
+glConvolutionParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glCopyBufferSubData:
+  return_type: [void]
+  parameters:
+  - [GLenum, readTarget]
+  - [GLenum, writeTarget]
+  - [GLintptr, readOffset]
+  - [GLintptr, writeOffset]
+  - [GLsizeiptr, size]
+glCopyColorSubTable:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, start]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+glCopyColorTable:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+glCopyConvolutionFilter1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+glCopyConvolutionFilter2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glCopyImageSubData:
+  return_type: [void]
+  parameters:
+  - [GLuint, srcName]
+  - [GLenum, srcTarget]
+  - [GLint, srcLevel]
+  - [GLint, srcX]
+  - [GLint, srcY]
+  - [GLint, srcZ]
+  - [GLuint, dstName]
+  - [GLenum, dstTarget]
+  - [GLint, dstLevel]
+  - [GLint, dstX]
+  - [GLint, dstY]
+  - [GLint, dstZ]
+  - [GLsizei, srcWidth]
+  - [GLsizei, srcHeight]
+  - [GLsizei, srcDepth]
+glCopyPixels:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, type]
+glCopyTexImage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, internalformat]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLint, border]
+glCopyTexImage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, internalformat]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLint, border]
+glCopyTexSubImage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+glCopyTexSubImage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glCopyTexSubImage3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLint, zoffset]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glCreateProgram:
+  return_type: [GLuint]
+  parameters: []
+glCreateShader:
+  return_type: [GLuint]
+  parameters:
+  - [GLenum, type]
+glCreateShaderProgramv:
+  return_type: [GLuint]
+  parameters:
+  - [GLenum, type]
+  - [GLsizei, count]
+  - [const, GLchar, '*', const, '*', strings]
+glCullFace:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glDebugMessageCallback:
+  return_type: [void]
+  parameters:
+  - [GLDEBUGPROC, callback]
+  - [const, void, '*', userParam]
+glDebugMessageControl:
+  return_type: [void]
+  parameters:
+  - [GLenum, source]
+  - [GLenum, type]
+  - [GLenum, severity]
+  - [GLsizei, count]
+  - [const, GLuint, '*', ids]
+  - [GLboolean, enabled]
+glDebugMessageInsert:
+  return_type: [void]
+  parameters:
+  - [GLenum, source]
+  - [GLenum, type]
+  - [GLuint, id]
+  - [GLenum, severity]
+  - [GLsizei, length]
+  - [const, GLchar, '*', buf]
+glDeleteBuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', buffers]
+glDeleteFramebuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', framebuffers]
+glDeleteLists:
+  return_type: [void]
+  parameters:
+  - [GLuint, list]
+  - [GLsizei, range]
+glDeleteProgram:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+glDeleteProgramPipelines:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', pipelines]
+glDeleteQueries:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', ids]
+glDeleteRenderbuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', renderbuffers]
+glDeleteSamplers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, count]
+  - [const, GLuint, '*', samplers]
+glDeleteShader:
+  return_type: [void]
+  parameters:
+  - [GLuint, shader]
+glDeleteSync:
+  return_type: [void]
+  parameters:
+  - [GLsync, sync]
+glDeleteTextures:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', textures]
+glDeleteTransformFeedbacks:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', ids]
+glDeleteVertexArrays:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', arrays]
+glDepthFunc:
+  return_type: [void]
+  parameters:
+  - [GLenum, func]
+glDepthMask:
+  return_type: [void]
+  parameters:
+  - [GLboolean, flag]
+glDepthRange:
+  return_type: [void]
+  parameters:
+  - [GLdouble, near]
+  - [GLdouble, far]
+glDepthRangeArrayv:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', v]
+glDepthRangeIndexed:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, n]
+  - [GLdouble, f]
+glDepthRangef:
+  return_type: [void]
+  parameters:
+  - [GLfloat, n]
+  - [GLfloat, f]
+glDetachShader:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, shader]
+glDisable:
+  return_type: [void]
+  parameters:
+  - [GLenum, cap]
+glDisableClientState:
+  return_type: [void]
+  parameters:
+  - [GLenum, array]
+glDisableVertexAttribArray:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+glDisablei:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+glDispatchCompute:
+  return_type: [void]
+  parameters:
+  - [GLuint, num_groups_x]
+  - [GLuint, num_groups_y]
+  - [GLuint, num_groups_z]
+glDispatchComputeIndirect:
+  return_type: [void]
+  parameters:
+  - [GLintptr, indirect]
+glDrawArrays:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLint, first]
+  - [GLsizei, count]
+glDrawArraysIndirect:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [const, GLvoid, '*', indirect]
+glDrawArraysInstanced:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLint, first]
+  - [GLsizei, count]
+  - [GLsizei, instancecount]
+glDrawArraysInstancedBaseInstance:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLint, first]
+  - [GLsizei, count]
+  - [GLsizei, instancecount]
+  - [GLuint, baseinstance]
+glDrawBuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glDrawBuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLenum, '*', bufs]
+glDrawElements:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indices]
+glDrawElementsBaseVertex:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indices]
+  - [GLint, basevertex]
+glDrawElementsIndirect:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indirect]
+glDrawElementsInstanced:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indices]
+  - [GLsizei, instancecount]
+glDrawElementsInstancedBaseInstance:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, void, '*', indices]
+  - [GLsizei, instancecount]
+  - [GLuint, baseinstance]
+glDrawElementsInstancedBaseVertex:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indices]
+  - [GLsizei, instancecount]
+  - [GLint, basevertex]
+glDrawElementsInstancedBaseVertexBaseInstance:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, void, '*', indices]
+  - [GLsizei, instancecount]
+  - [GLint, basevertex]
+  - [GLuint, baseinstance]
+glDrawPixels:
+  return_type: [void]
+  parameters:
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glDrawRangeElements:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLuint, start]
+  - [GLuint, end]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indices]
+glDrawRangeElementsBaseVertex:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLuint, start]
+  - [GLuint, end]
+  - [GLsizei, count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', indices]
+  - [GLint, basevertex]
+glDrawTransformFeedback:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLuint, id]
+glDrawTransformFeedbackInstanced:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLuint, id]
+  - [GLsizei, instancecount]
+glDrawTransformFeedbackStream:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLuint, id]
+  - [GLuint, stream]
+glDrawTransformFeedbackStreamInstanced:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLuint, id]
+  - [GLuint, stream]
+  - [GLsizei, instancecount]
+glEdgeFlag:
+  return_type: [void]
+  parameters:
+  - [GLboolean, flag]
+glEdgeFlagPointer:
+  return_type: [void]
+  parameters:
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glEdgeFlagv:
+  return_type: [void]
+  parameters:
+  - [const, GLboolean, '*', flag]
+glEnable:
+  return_type: [void]
+  parameters:
+  - [GLenum, cap]
+glEnableClientState:
+  return_type: [void]
+  parameters:
+  - [GLenum, array]
+glEnableVertexAttribArray:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+glEnablei:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+glEnd:
+  return_type: [void]
+  parameters: []
+glEndConditionalRender:
+  return_type: [void]
+  parameters: []
+glEndList:
+  return_type: [void]
+  parameters: []
+glEndQuery:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+glEndQueryIndexed:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+glEndTransformFeedback:
+  return_type: [void]
+  parameters: []
+glEvalCoord1d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, u]
+glEvalCoord1dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', u]
+glEvalCoord1f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, u]
+glEvalCoord1fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', u]
+glEvalCoord2d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, u]
+  - [GLdouble, v]
+glEvalCoord2dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', u]
+glEvalCoord2f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, u]
+  - [GLfloat, v]
+glEvalCoord2fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', u]
+glEvalMesh1:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLint, i1]
+  - [GLint, i2]
+glEvalMesh2:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLint, i1]
+  - [GLint, i2]
+  - [GLint, j1]
+  - [GLint, j2]
+glEvalPoint1:
+  return_type: [void]
+  parameters:
+  - [GLint, i]
+glEvalPoint2:
+  return_type: [void]
+  parameters:
+  - [GLint, i]
+  - [GLint, j]
+glFeedbackBuffer:
+  return_type: [void]
+  parameters:
+  - [GLsizei, size]
+  - [GLenum, type]
+  - [GLfloat, '*', buffer]
+glFenceSync:
+  return_type: [GLsync]
+  parameters:
+  - [GLenum, condition]
+  - [GLbitfield, flags]
+glFinish:
+  return_type: [void]
+  parameters: []
+glFlush:
+  return_type: [void]
+  parameters: []
+glFlushMappedBufferRange:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLintptr, offset]
+  - [GLsizeiptr, length]
+glFogCoordPointer:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glFogCoordd:
+  return_type: [void]
+  parameters:
+  - [GLdouble, coord]
+glFogCoorddv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', coord]
+glFogCoordf:
+  return_type: [void]
+  parameters:
+  - [GLfloat, coord]
+glFogCoordfv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', coord]
+glFogf:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLfloat, param]
+glFogfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glFogi:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, param]
+glFogiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glFramebufferParameteri:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, param]
+glFramebufferRenderbuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLenum, renderbuffertarget]
+  - [GLuint, renderbuffer]
+glFramebufferTexture:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLuint, texture]
+  - [GLint, level]
+glFramebufferTexture1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLenum, textarget]
+  - [GLuint, texture]
+  - [GLint, level]
+glFramebufferTexture2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLenum, textarget]
+  - [GLuint, texture]
+  - [GLint, level]
+glFramebufferTexture3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLenum, textarget]
+  - [GLuint, texture]
+  - [GLint, level]
+  - [GLint, zoffset]
+glFramebufferTextureLayer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLuint, texture]
+  - [GLint, level]
+  - [GLint, layer]
+glFrontFace:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glFrustum:
+  return_type: [void]
+  parameters:
+  - [GLdouble, left]
+  - [GLdouble, right]
+  - [GLdouble, bottom]
+  - [GLdouble, top]
+  - [GLdouble, zNear]
+  - [GLdouble, zFar]
+glGenBuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', buffers]
+glGenFramebuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', framebuffers]
+glGenLists:
+  return_type: [GLuint]
+  parameters:
+  - [GLsizei, range]
+glGenProgramPipelines:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', pipelines]
+glGenQueries:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', ids]
+glGenRenderbuffers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', renderbuffers]
+glGenSamplers:
+  return_type: [void]
+  parameters:
+  - [GLsizei, count]
+  - [GLuint, '*', samplers]
+glGenTextures:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', textures]
+glGenTransformFeedbacks:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', ids]
+glGenVertexArrays:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [GLuint, '*', arrays]
+glGenerateMipmap:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+glGetActiveAtomicCounterBufferiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, bufferIndex]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetActiveAttrib:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, index]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLint, '*', size]
+  - [GLenum, '*', type]
+  - [GLchar, '*', name]
+glGetActiveSubroutineName:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, shadertype]
+  - [GLuint, index]
+  - [GLsizei, bufsize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', name]
+glGetActiveSubroutineUniformName:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, shadertype]
+  - [GLuint, index]
+  - [GLsizei, bufsize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', name]
+glGetActiveSubroutineUniformiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, shadertype]
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLint, '*', values]
+glGetActiveUniform:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, index]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLint, '*', size]
+  - [GLenum, '*', type]
+  - [GLchar, '*', name]
+glGetActiveUniformBlockName:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, uniformBlockIndex]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', uniformBlockName]
+glGetActiveUniformBlockiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, uniformBlockIndex]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetActiveUniformName:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, uniformIndex]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', uniformName]
+glGetActiveUniformsiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLsizei, uniformCount]
+  - [const, GLuint, '*', uniformIndices]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetAttachedShaders:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLsizei, maxCount]
+  - [GLsizei, '*', count]
+  - [GLuint, '*', shaders]
+glGetAttribLocation:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [const, GLchar, '*', name]
+glGetBooleani_v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLboolean, '*', data]
+glGetBooleanv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLboolean, '*', params]
+glGetBufferParameteri64v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint64, '*', params]
+glGetBufferParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetBufferPointerv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLvoid, '*', '*', params]
+glGetBufferSubData:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLintptr, offset]
+  - [GLsizeiptr, size]
+  - [GLvoid, '*', data]
+glGetClipPlane:
+  return_type: [void]
+  parameters:
+  - [GLenum, plane]
+  - [GLdouble, '*', equation]
+glGetColorTable:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', table]
+glGetColorTableParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetColorTableParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetCompressedTexImage:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLvoid, '*', img]
+glGetConvolutionFilter:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', image]
+glGetConvolutionParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetConvolutionParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetDebugMessageLog:
+  return_type: [GLuint]
+  parameters:
+  - [GLuint, count]
+  - [GLsizei, bufSize]
+  - [GLenum, '*', sources]
+  - [GLenum, '*', types]
+  - [GLuint, '*', ids]
+  - [GLenum, '*', severities]
+  - [GLsizei, '*', lengths]
+  - [GLchar, '*', messageLog]
+glGetDoublei_v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLdouble, '*', data]
+glGetDoublev:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLdouble, '*', params]
+glGetError:
+  return_type: [GLenum]
+  parameters: []
+glGetFloati_v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLfloat, '*', data]
+glGetFloatv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetFragDataIndex:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [const, GLchar, '*', name]
+glGetFragDataLocation:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [const, GLchar, '*', name]
+glGetFramebufferAttachmentParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, attachment]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetFramebufferParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetHistogram:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLboolean, reset]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', values]
+glGetHistogramParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetHistogramParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetInteger64i_v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLint64, '*', data]
+glGetInteger64v:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint64, '*', params]
+glGetIntegeri_v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLint, '*', data]
+glGetIntegerv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetInternalformati64v:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLenum, pname]
+  - [GLsizei, bufSize]
+  - [GLint64, '*', params]
+glGetInternalformativ:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLenum, pname]
+  - [GLsizei, bufSize]
+  - [GLint, '*', params]
+glGetLightfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, light]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetLightiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, light]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetMapdv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, query]
+  - [GLdouble, '*', v]
+glGetMapfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, query]
+  - [GLfloat, '*', v]
+glGetMapiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, query]
+  - [GLint, '*', v]
+glGetMaterialfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetMaterialiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetMinmax:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLboolean, reset]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', values]
+glGetMinmaxParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetMinmaxParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetMultisamplefv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLuint, index]
+  - [GLfloat, '*', val]
+glGetObjectLabel:
+  return_type: [void]
+  parameters:
+  - [GLenum, identifier]
+  - [GLuint, name]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', label]
+glGetObjectPtrLabel:
+  return_type: [void]
+  parameters:
+  - [const, void, '*', ptr]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', label]
+glGetPixelMapfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, map]
+  - [GLfloat, '*', values]
+glGetPixelMapuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, map]
+  - [GLuint, '*', values]
+glGetPixelMapusv:
+  return_type: [void]
+  parameters:
+  - [GLenum, map]
+  - [GLushort, '*', values]
+glGetPointerv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLvoid, '*', '*', params]
+glGetPolygonStipple:
+  return_type: [void]
+  parameters:
+  - [GLubyte, '*', mask]
+glGetProgramBinary:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLenum, '*', binaryFormat]
+  - [GLvoid, '*', binary]
+glGetProgramInfoLog:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', infoLog]
+glGetProgramInterfaceiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, programInterface]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetProgramPipelineInfoLog:
+  return_type: [void]
+  parameters:
+  - [GLuint, pipeline]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', infoLog]
+glGetProgramPipelineiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, pipeline]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetProgramResourceIndex:
+  return_type: [GLuint]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, programInterface]
+  - [const, GLchar, '*', name]
+glGetProgramResourceLocation:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, programInterface]
+  - [const, GLchar, '*', name]
+glGetProgramResourceLocationIndex:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, programInterface]
+  - [const, GLchar, '*', name]
+glGetProgramResourceName:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, programInterface]
+  - [GLuint, index]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', name]
+glGetProgramResourceiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, programInterface]
+  - [GLuint, index]
+  - [GLsizei, propCount]
+  - [const, GLenum, '*', props]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLint, '*', params]
+glGetProgramStageiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, shadertype]
+  - [GLenum, pname]
+  - [GLint, '*', values]
+glGetProgramiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetQueryIndexediv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetQueryObjecti64v:
+  return_type: [void]
+  parameters:
+  - [GLuint, id]
+  - [GLenum, pname]
+  - [GLint64, '*', params]
+glGetQueryObjectiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, id]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetQueryObjectui64v:
+  return_type: [void]
+  parameters:
+  - [GLuint, id]
+  - [GLenum, pname]
+  - [GLuint64, '*', params]
+glGetQueryObjectuiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, id]
+  - [GLenum, pname]
+  - [GLuint, '*', params]
+glGetQueryiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetRenderbufferParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetSamplerParameterIiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetSamplerParameterIuiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [GLuint, '*', params]
+glGetSamplerParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetSamplerParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetSeparableFilter:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', row]
+  - [GLvoid, '*', column]
+  - [GLvoid, '*', span]
+glGetShaderInfoLog:
+  return_type: [void]
+  parameters:
+  - [GLuint, shader]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', infoLog]
+glGetShaderPrecisionFormat:
+  return_type: [void]
+  parameters:
+  - [GLenum, shadertype]
+  - [GLenum, precisiontype]
+  - [GLint, '*', range]
+  - [GLint, '*', precision]
+glGetShaderSource:
+  return_type: [void]
+  parameters:
+  - [GLuint, shader]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLchar, '*', source]
+glGetShaderiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, shader]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetString:
+  return_type: [const, GLubyte, '*']
+  parameters:
+  - [GLenum, name]
+glGetStringi:
+  return_type: [const, GLubyte, '*']
+  parameters:
+  - [GLenum, name]
+  - [GLuint, index]
+glGetSubroutineIndex:
+  return_type: [GLuint]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, shadertype]
+  - [const, GLchar, '*', name]
+glGetSubroutineUniformLocation:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, shadertype]
+  - [const, GLchar, '*', name]
+glGetSynciv:
+  return_type: [void]
+  parameters:
+  - [GLsync, sync]
+  - [GLenum, pname]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLint, '*', values]
+glGetTexEnvfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetTexEnviv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetTexGendv:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [GLdouble, '*', params]
+glGetTexGenfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetTexGeniv:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetTexImage:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', pixels]
+glGetTexLevelParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetTexLevelParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetTexParameterIiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetTexParameterIuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLuint, '*', params]
+glGetTexParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetTexParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetTransformFeedbackVarying:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, index]
+  - [GLsizei, bufSize]
+  - [GLsizei, '*', length]
+  - [GLsizei, '*', size]
+  - [GLenum, '*', type]
+  - [GLchar, '*', name]
+glGetUniformBlockIndex:
+  return_type: [GLuint]
+  parameters:
+  - [GLuint, program]
+  - [const, GLchar, '*', uniformBlockName]
+glGetUniformIndices:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLsizei, uniformCount]
+  - [const, GLchar, '*', const, '*', uniformNames]
+  - [GLuint, '*', uniformIndices]
+glGetUniformLocation:
+  return_type: [GLint]
+  parameters:
+  - [GLuint, program]
+  - [const, GLchar, '*', name]
+glGetUniformSubroutineuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, shadertype]
+  - [GLint, location]
+  - [GLuint, '*', params]
+glGetUniformdv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLdouble, '*', params]
+glGetUniformfv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLfloat, '*', params]
+glGetUniformiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLint, '*', params]
+glGetUniformuiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLuint, '*', params]
+glGetVertexAttribIiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glGetVertexAttribIuiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLuint, '*', params]
+glGetVertexAttribLdv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLdouble, '*', params]
+glGetVertexAttribPointerv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLvoid, '*', '*', pointer]
+glGetVertexAttribdv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLdouble, '*', params]
+glGetVertexAttribfv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLfloat, '*', params]
+glGetVertexAttribiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, pname]
+  - [GLint, '*', params]
+glHint:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, mode]
+glHistogram:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, width]
+  - [GLenum, internalformat]
+  - [GLboolean, sink]
+glIndexMask:
+  return_type: [void]
+  parameters:
+  - [GLuint, mask]
+glIndexPointer:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glIndexd:
+  return_type: [void]
+  parameters:
+  - [GLdouble, c]
+glIndexdv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', c]
+glIndexf:
+  return_type: [void]
+  parameters:
+  - [GLfloat, c]
+glIndexfv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', c]
+glIndexi:
+  return_type: [void]
+  parameters:
+  - [GLint, c]
+glIndexiv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', c]
+glIndexs:
+  return_type: [void]
+  parameters:
+  - [GLshort, c]
+glIndexsv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', c]
+glIndexub:
+  return_type: [void]
+  parameters:
+  - [GLubyte, c]
+glIndexubv:
+  return_type: [void]
+  parameters:
+  - [const, GLubyte, '*', c]
+glInitNames:
+  return_type: [void]
+  parameters: []
+glInterleavedArrays:
+  return_type: [void]
+  parameters:
+  - [GLenum, format]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glInvalidateBufferData:
+  return_type: [void]
+  parameters:
+  - [GLuint, buffer]
+glInvalidateBufferSubData:
+  return_type: [void]
+  parameters:
+  - [GLuint, buffer]
+  - [GLintptr, offset]
+  - [GLsizeiptr, length]
+glInvalidateFramebuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, numAttachments]
+  - [const, GLenum, '*', attachments]
+glInvalidateSubFramebuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, numAttachments]
+  - [const, GLenum, '*', attachments]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glInvalidateTexImage:
+  return_type: [void]
+  parameters:
+  - [GLuint, texture]
+  - [GLint, level]
+glInvalidateTexSubImage:
+  return_type: [void]
+  parameters:
+  - [GLuint, texture]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLint, zoffset]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+glIsBuffer:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, buffer]
+glIsEnabled:
+  return_type: [GLboolean]
+  parameters:
+  - [GLenum, cap]
+glIsEnabledi:
+  return_type: [GLboolean]
+  parameters:
+  - [GLenum, target]
+  - [GLuint, index]
+glIsFramebuffer:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, framebuffer]
+glIsList:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, list]
+glIsProgram:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, program]
+glIsProgramPipeline:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, pipeline]
+glIsQuery:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, id]
+glIsRenderbuffer:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, renderbuffer]
+glIsSampler:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, sampler]
+glIsShader:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, shader]
+glIsSync:
+  return_type: [GLboolean]
+  parameters:
+  - [GLsync, sync]
+glIsTexture:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, texture]
+glIsTransformFeedback:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, id]
+glIsVertexArray:
+  return_type: [GLboolean]
+  parameters:
+  - [GLuint, array]
+glLightModelf:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLfloat, param]
+glLightModelfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glLightModeli:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, param]
+glLightModeliv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glLightf:
+  return_type: [void]
+  parameters:
+  - [GLenum, light]
+  - [GLenum, pname]
+  - [GLfloat, param]
+glLightfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, light]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glLighti:
+  return_type: [void]
+  parameters:
+  - [GLenum, light]
+  - [GLenum, pname]
+  - [GLint, param]
+glLightiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, light]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glLineStipple:
+  return_type: [void]
+  parameters:
+  - [GLint, factor]
+  - [GLushort, pattern]
+glLineWidth:
+  return_type: [void]
+  parameters:
+  - [GLfloat, width]
+glLinkProgram:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+glListBase:
+  return_type: [void]
+  parameters:
+  - [GLuint, base]
+glLoadIdentity:
+  return_type: [void]
+  parameters: []
+glLoadMatrixd:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', m]
+glLoadMatrixf:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', m]
+glLoadName:
+  return_type: [void]
+  parameters:
+  - [GLuint, name]
+glLoadTransposeMatrixd:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', m]
+glLoadTransposeMatrixf:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', m]
+glLogicOp:
+  return_type: [void]
+  parameters:
+  - [GLenum, opcode]
+glMap1d:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLdouble, u1]
+  - [GLdouble, u2]
+  - [GLint, stride]
+  - [GLint, order]
+  - [const, GLdouble, '*', points]
+glMap1f:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLfloat, u1]
+  - [GLfloat, u2]
+  - [GLint, stride]
+  - [GLint, order]
+  - [const, GLfloat, '*', points]
+glMap2d:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLdouble, u1]
+  - [GLdouble, u2]
+  - [GLint, ustride]
+  - [GLint, uorder]
+  - [GLdouble, v1]
+  - [GLdouble, v2]
+  - [GLint, vstride]
+  - [GLint, vorder]
+  - [const, GLdouble, '*', points]
+glMap2f:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLfloat, u1]
+  - [GLfloat, u2]
+  - [GLint, ustride]
+  - [GLint, uorder]
+  - [GLfloat, v1]
+  - [GLfloat, v2]
+  - [GLint, vstride]
+  - [GLint, vorder]
+  - [const, GLfloat, '*', points]
+glMapBuffer:
+  return_type: [void, '*']
+  parameters:
+  - [GLenum, target]
+  - [GLenum, access]
+glMapBufferRange:
+  return_type: [void, '*']
+  parameters:
+  - [GLenum, target]
+  - [GLintptr, offset]
+  - [GLsizeiptr, length]
+  - [GLbitfield, access]
+glMapGrid1d:
+  return_type: [void]
+  parameters:
+  - [GLint, un]
+  - [GLdouble, u1]
+  - [GLdouble, u2]
+glMapGrid1f:
+  return_type: [void]
+  parameters:
+  - [GLint, un]
+  - [GLfloat, u1]
+  - [GLfloat, u2]
+glMapGrid2d:
+  return_type: [void]
+  parameters:
+  - [GLint, un]
+  - [GLdouble, u1]
+  - [GLdouble, u2]
+  - [GLint, vn]
+  - [GLdouble, v1]
+  - [GLdouble, v2]
+glMapGrid2f:
+  return_type: [void]
+  parameters:
+  - [GLint, un]
+  - [GLfloat, u1]
+  - [GLfloat, u2]
+  - [GLint, vn]
+  - [GLfloat, v1]
+  - [GLfloat, v2]
+glMaterialf:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, pname]
+  - [GLfloat, param]
+glMaterialfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glMateriali:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, pname]
+  - [GLint, param]
+glMaterialiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glMatrixMode:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glMemoryBarrier:
+  return_type: [void]
+  parameters:
+  - [GLbitfield, barriers]
+glMinSampleShading:
+  return_type: [void]
+  parameters:
+  - [GLfloat, value]
+glMinmax:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLboolean, sink]
+glMultMatrixd:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', m]
+glMultMatrixf:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', m]
+glMultTransposeMatrixd:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', m]
+glMultTransposeMatrixf:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', m]
+glMultiDrawArrays:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [const, GLint, '*', first]
+  - [const, GLsizei, '*', count]
+  - [GLsizei, drawcount]
+glMultiDrawArraysIndirect:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [const, void, '*', indirect]
+  - [GLsizei, drawcount]
+  - [GLsizei, stride]
+glMultiDrawElements:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [const, GLsizei, '*', count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', const, '*', indices]
+  - [GLsizei, drawcount]
+glMultiDrawElementsBaseVertex:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [const, GLsizei, '*', count]
+  - [GLenum, type]
+  - [const, GLvoid, '*', const, '*', indices]
+  - [GLsizei, drawcount]
+  - [const, GLint, '*', basevertex]
+glMultiDrawElementsIndirect:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+  - [GLenum, type]
+  - [const, void, '*', indirect]
+  - [GLsizei, drawcount]
+  - [GLsizei, stride]
+glMultiTexCoord1d:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLdouble, s]
+glMultiTexCoord1dv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLdouble, '*', v]
+glMultiTexCoord1f:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLfloat, s]
+glMultiTexCoord1fv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLfloat, '*', v]
+glMultiTexCoord1i:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, s]
+glMultiTexCoord1iv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLint, '*', v]
+glMultiTexCoord1s:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLshort, s]
+glMultiTexCoord1sv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLshort, '*', v]
+glMultiTexCoord2d:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLdouble, s]
+  - [GLdouble, t]
+glMultiTexCoord2dv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLdouble, '*', v]
+glMultiTexCoord2f:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLfloat, s]
+  - [GLfloat, t]
+glMultiTexCoord2fv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLfloat, '*', v]
+glMultiTexCoord2i:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, s]
+  - [GLint, t]
+glMultiTexCoord2iv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLint, '*', v]
+glMultiTexCoord2s:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLshort, s]
+  - [GLshort, t]
+glMultiTexCoord2sv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLshort, '*', v]
+glMultiTexCoord3d:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLdouble, s]
+  - [GLdouble, t]
+  - [GLdouble, r]
+glMultiTexCoord3dv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLdouble, '*', v]
+glMultiTexCoord3f:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLfloat, s]
+  - [GLfloat, t]
+  - [GLfloat, r]
+glMultiTexCoord3fv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLfloat, '*', v]
+glMultiTexCoord3i:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, s]
+  - [GLint, t]
+  - [GLint, r]
+glMultiTexCoord3iv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLint, '*', v]
+glMultiTexCoord3s:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLshort, s]
+  - [GLshort, t]
+  - [GLshort, r]
+glMultiTexCoord3sv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLshort, '*', v]
+glMultiTexCoord4d:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLdouble, s]
+  - [GLdouble, t]
+  - [GLdouble, r]
+  - [GLdouble, q]
+glMultiTexCoord4dv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLdouble, '*', v]
+glMultiTexCoord4f:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLfloat, s]
+  - [GLfloat, t]
+  - [GLfloat, r]
+  - [GLfloat, q]
+glMultiTexCoord4fv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLfloat, '*', v]
+glMultiTexCoord4i:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, s]
+  - [GLint, t]
+  - [GLint, r]
+  - [GLint, q]
+glMultiTexCoord4iv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLint, '*', v]
+glMultiTexCoord4s:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLshort, s]
+  - [GLshort, t]
+  - [GLshort, r]
+  - [GLshort, q]
+glMultiTexCoord4sv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [const, GLshort, '*', v]
+glMultiTexCoordP1ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [GLuint, coords]
+glMultiTexCoordP1uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glMultiTexCoordP2ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [GLuint, coords]
+glMultiTexCoordP2uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glMultiTexCoordP3ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [GLuint, coords]
+glMultiTexCoordP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glMultiTexCoordP4ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [GLuint, coords]
+glMultiTexCoordP4uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, texture]
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glNewList:
+  return_type: [void]
+  parameters:
+  - [GLuint, list]
+  - [GLenum, mode]
+glNormal3b:
+  return_type: [void]
+  parameters:
+  - [GLbyte, nx]
+  - [GLbyte, ny]
+  - [GLbyte, nz]
+glNormal3bv:
+  return_type: [void]
+  parameters:
+  - [const, GLbyte, '*', v]
+glNormal3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, nx]
+  - [GLdouble, ny]
+  - [GLdouble, nz]
+glNormal3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glNormal3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, nx]
+  - [GLfloat, ny]
+  - [GLfloat, nz]
+glNormal3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glNormal3i:
+  return_type: [void]
+  parameters:
+  - [GLint, nx]
+  - [GLint, ny]
+  - [GLint, nz]
+glNormal3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glNormal3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, nx]
+  - [GLshort, ny]
+  - [GLshort, nz]
+glNormal3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glNormalP3ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, coords]
+glNormalP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glNormalPointer:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glObjectLabel:
+  return_type: [void]
+  parameters:
+  - [GLenum, identifier]
+  - [GLuint, name]
+  - [GLsizei, length]
+  - [const, GLchar, '*', label]
+glObjectPtrLabel:
+  return_type: [void]
+  parameters:
+  - [const, void, '*', ptr]
+  - [GLsizei, length]
+  - [const, GLchar, '*', label]
+glOrtho:
+  return_type: [void]
+  parameters:
+  - [GLdouble, left]
+  - [GLdouble, right]
+  - [GLdouble, bottom]
+  - [GLdouble, top]
+  - [GLdouble, zNear]
+  - [GLdouble, zFar]
+glPassThrough:
+  return_type: [void]
+  parameters:
+  - [GLfloat, token]
+glPatchParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLfloat, '*', values]
+glPatchParameteri:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, value]
+glPauseTransformFeedback:
+  return_type: [void]
+  parameters: []
+glPixelMapfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, map]
+  - [GLsizei, mapsize]
+  - [const, GLfloat, '*', values]
+glPixelMapuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, map]
+  - [GLsizei, mapsize]
+  - [const, GLuint, '*', values]
+glPixelMapusv:
+  return_type: [void]
+  parameters:
+  - [GLenum, map]
+  - [GLsizei, mapsize]
+  - [const, GLushort, '*', values]
+glPixelStoref:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLfloat, param]
+glPixelStorei:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, param]
+glPixelTransferf:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLfloat, param]
+glPixelTransferi:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, param]
+glPixelZoom:
+  return_type: [void]
+  parameters:
+  - [GLfloat, xfactor]
+  - [GLfloat, yfactor]
+glPointParameterf:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLfloat, param]
+glPointParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glPointParameteri:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [GLint, param]
+glPointParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glPointSize:
+  return_type: [void]
+  parameters:
+  - [GLfloat, size]
+glPolygonMode:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, mode]
+glPolygonOffset:
+  return_type: [void]
+  parameters:
+  - [GLfloat, factor]
+  - [GLfloat, units]
+glPolygonStipple:
+  return_type: [void]
+  parameters:
+  - [const, GLubyte, '*', mask]
+glPopAttrib:
+  return_type: [void]
+  parameters: []
+glPopClientAttrib:
+  return_type: [void]
+  parameters: []
+glPopDebugGroup:
+  return_type: [void]
+  parameters: []
+glPopMatrix:
+  return_type: [void]
+  parameters: []
+glPopName:
+  return_type: [void]
+  parameters: []
+glPrimitiveRestartIndex:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+glPrioritizeTextures:
+  return_type: [void]
+  parameters:
+  - [GLsizei, n]
+  - [const, GLuint, '*', textures]
+  - [const, GLfloat, '*', priorities]
+glProgramBinary:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, binaryFormat]
+  - [const, GLvoid, '*', binary]
+  - [GLsizei, length]
+glProgramParameteri:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLenum, pname]
+  - [GLint, value]
+glProgramUniform1d:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLdouble, v0]
+glProgramUniform1dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glProgramUniform1f:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLfloat, v0]
+glProgramUniform1fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glProgramUniform1i:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLint, v0]
+glProgramUniform1iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glProgramUniform1ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLuint, v0]
+glProgramUniform1uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glProgramUniform2d:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLdouble, v0]
+  - [GLdouble, v1]
+glProgramUniform2dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glProgramUniform2f:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLfloat, v0]
+  - [GLfloat, v1]
+glProgramUniform2fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glProgramUniform2i:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLint, v0]
+  - [GLint, v1]
+glProgramUniform2iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glProgramUniform2ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLuint, v0]
+  - [GLuint, v1]
+glProgramUniform2uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glProgramUniform3d:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLdouble, v0]
+  - [GLdouble, v1]
+  - [GLdouble, v2]
+glProgramUniform3dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glProgramUniform3f:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLfloat, v0]
+  - [GLfloat, v1]
+  - [GLfloat, v2]
+glProgramUniform3fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glProgramUniform3i:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLint, v0]
+  - [GLint, v1]
+  - [GLint, v2]
+glProgramUniform3iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glProgramUniform3ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLuint, v0]
+  - [GLuint, v1]
+  - [GLuint, v2]
+glProgramUniform3uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glProgramUniform4d:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLdouble, v0]
+  - [GLdouble, v1]
+  - [GLdouble, v2]
+  - [GLdouble, v3]
+glProgramUniform4dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glProgramUniform4f:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLfloat, v0]
+  - [GLfloat, v1]
+  - [GLfloat, v2]
+  - [GLfloat, v3]
+glProgramUniform4fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glProgramUniform4i:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLint, v0]
+  - [GLint, v1]
+  - [GLint, v2]
+  - [GLint, v3]
+glProgramUniform4iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glProgramUniform4ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLuint, v0]
+  - [GLuint, v1]
+  - [GLuint, v2]
+  - [GLuint, v3]
+glProgramUniform4uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glProgramUniformMatrix2dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix2fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix2x3dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix2x3fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix2x4dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix2x4fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix3dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix3fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix3x2dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix3x2fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix3x4dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix3x4fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix4dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix4fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix4x2dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix4x2fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProgramUniformMatrix4x3dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glProgramUniformMatrix4x3fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glProvokingVertex:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glPushAttrib:
+  return_type: [void]
+  parameters:
+  - [GLbitfield, mask]
+glPushClientAttrib:
+  return_type: [void]
+  parameters:
+  - [GLbitfield, mask]
+glPushDebugGroup:
+  return_type: [void]
+  parameters:
+  - [GLenum, source]
+  - [GLuint, id]
+  - [GLsizei, length]
+  - [const, GLchar, '*', message]
+glPushMatrix:
+  return_type: [void]
+  parameters: []
+glPushName:
+  return_type: [void]
+  parameters:
+  - [GLuint, name]
+glQueryCounter:
+  return_type: [void]
+  parameters:
+  - [GLuint, id]
+  - [GLenum, target]
+glRasterPos2d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+glRasterPos2dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glRasterPos2f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+glRasterPos2fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glRasterPos2i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+glRasterPos2iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glRasterPos2s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+glRasterPos2sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glRasterPos3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glRasterPos3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glRasterPos3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glRasterPos3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glRasterPos3i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+glRasterPos3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glRasterPos3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+glRasterPos3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glRasterPos4d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+  - [GLdouble, w]
+glRasterPos4dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glRasterPos4f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+  - [GLfloat, w]
+glRasterPos4fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glRasterPos4i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+  - [GLint, w]
+glRasterPos4iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glRasterPos4s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+  - [GLshort, w]
+glRasterPos4sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glReadBuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glReadPixels:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [GLvoid, '*', pixels]
+glRectd:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x1]
+  - [GLdouble, y1]
+  - [GLdouble, x2]
+  - [GLdouble, y2]
+glRectdv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v1]
+  - [const, GLdouble, '*', v2]
+glRectf:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x1]
+  - [GLfloat, y1]
+  - [GLfloat, x2]
+  - [GLfloat, y2]
+glRectfv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v1]
+  - [const, GLfloat, '*', v2]
+glRecti:
+  return_type: [void]
+  parameters:
+  - [GLint, x1]
+  - [GLint, y1]
+  - [GLint, x2]
+  - [GLint, y2]
+glRectiv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v1]
+  - [const, GLint, '*', v2]
+glRects:
+  return_type: [void]
+  parameters:
+  - [GLshort, x1]
+  - [GLshort, y1]
+  - [GLshort, x2]
+  - [GLshort, y2]
+glRectsv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v1]
+  - [const, GLshort, '*', v2]
+glReleaseShaderCompiler:
+  return_type: [void]
+  parameters: []
+glRenderMode:
+  return_type: [GLint]
+  parameters:
+  - [GLenum, mode]
+glRenderbufferStorage:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glRenderbufferStorageMultisample:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, samples]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glResetHistogram:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+glResetMinmax:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+glResumeTransformFeedback:
+  return_type: [void]
+  parameters: []
+glRotated:
+  return_type: [void]
+  parameters:
+  - [GLdouble, angle]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glRotatef:
+  return_type: [void]
+  parameters:
+  - [GLfloat, angle]
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glSampleCoverage:
+  return_type: [void]
+  parameters:
+  - [GLfloat, value]
+  - [GLboolean, invert]
+glSampleMaski:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLbitfield, mask]
+glSamplerParameterIiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [const, GLint, '*', param]
+glSamplerParameterIuiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [const, GLuint, '*', param]
+glSamplerParameterf:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [GLfloat, param]
+glSamplerParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', param]
+glSamplerParameteri:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [GLint, param]
+glSamplerParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLuint, sampler]
+  - [GLenum, pname]
+  - [const, GLint, '*', param]
+glScaled:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glScalef:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glScissor:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glScissorArrayv:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLint, '*', v]
+glScissorIndexed:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, left]
+  - [GLint, bottom]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glScissorIndexedv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glSecondaryColor3b:
+  return_type: [void]
+  parameters:
+  - [GLbyte, red]
+  - [GLbyte, green]
+  - [GLbyte, blue]
+glSecondaryColor3bv:
+  return_type: [void]
+  parameters:
+  - [const, GLbyte, '*', v]
+glSecondaryColor3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, red]
+  - [GLdouble, green]
+  - [GLdouble, blue]
+glSecondaryColor3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glSecondaryColor3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, red]
+  - [GLfloat, green]
+  - [GLfloat, blue]
+glSecondaryColor3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glSecondaryColor3i:
+  return_type: [void]
+  parameters:
+  - [GLint, red]
+  - [GLint, green]
+  - [GLint, blue]
+glSecondaryColor3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glSecondaryColor3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, red]
+  - [GLshort, green]
+  - [GLshort, blue]
+glSecondaryColor3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glSecondaryColor3ub:
+  return_type: [void]
+  parameters:
+  - [GLubyte, red]
+  - [GLubyte, green]
+  - [GLubyte, blue]
+glSecondaryColor3ubv:
+  return_type: [void]
+  parameters:
+  - [const, GLubyte, '*', v]
+glSecondaryColor3ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, red]
+  - [GLuint, green]
+  - [GLuint, blue]
+glSecondaryColor3uiv:
+  return_type: [void]
+  parameters:
+  - [const, GLuint, '*', v]
+glSecondaryColor3us:
+  return_type: [void]
+  parameters:
+  - [GLushort, red]
+  - [GLushort, green]
+  - [GLushort, blue]
+glSecondaryColor3usv:
+  return_type: [void]
+  parameters:
+  - [const, GLushort, '*', v]
+glSecondaryColorP3ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, color]
+glSecondaryColorP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', color]
+glSecondaryColorPointer:
+  return_type: [void]
+  parameters:
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glSelectBuffer:
+  return_type: [void]
+  parameters:
+  - [GLsizei, size]
+  - [GLuint, '*', buffer]
+glSeparableFilter2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', row]
+  - [const, GLvoid, '*', column]
+glShadeModel:
+  return_type: [void]
+  parameters:
+  - [GLenum, mode]
+glShaderBinary:
+  return_type: [void]
+  parameters:
+  - [GLsizei, count]
+  - [const, GLuint, '*', shaders]
+  - [GLenum, binaryformat]
+  - [const, GLvoid, '*', binary]
+  - [GLsizei, length]
+glShaderSource:
+  return_type: [void]
+  parameters:
+  - [GLuint, shader]
+  - [GLsizei, count]
+  - [const, GLchar, '*', const, '*', string]
+  - [const, GLint, '*', length]
+glShaderStorageBlockBinding:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, storageBlockIndex]
+  - [GLuint, storageBlockBinding]
+glStencilFunc:
+  return_type: [void]
+  parameters:
+  - [GLenum, func]
+  - [GLint, ref]
+  - [GLuint, mask]
+glStencilFuncSeparate:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, func]
+  - [GLint, ref]
+  - [GLuint, mask]
+glStencilMask:
+  return_type: [void]
+  parameters:
+  - [GLuint, mask]
+glStencilMaskSeparate:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLuint, mask]
+glStencilOp:
+  return_type: [void]
+  parameters:
+  - [GLenum, fail]
+  - [GLenum, zfail]
+  - [GLenum, zpass]
+glStencilOpSeparate:
+  return_type: [void]
+  parameters:
+  - [GLenum, face]
+  - [GLenum, sfail]
+  - [GLenum, dpfail]
+  - [GLenum, dppass]
+glTexBuffer:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLuint, buffer]
+glTexBufferRange:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, internalformat]
+  - [GLuint, buffer]
+  - [GLintptr, offset]
+  - [GLsizeiptr, size]
+glTexCoord1d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, s]
+glTexCoord1dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glTexCoord1f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, s]
+glTexCoord1fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glTexCoord1i:
+  return_type: [void]
+  parameters:
+  - [GLint, s]
+glTexCoord1iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glTexCoord1s:
+  return_type: [void]
+  parameters:
+  - [GLshort, s]
+glTexCoord1sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glTexCoord2d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, s]
+  - [GLdouble, t]
+glTexCoord2dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glTexCoord2f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, s]
+  - [GLfloat, t]
+glTexCoord2fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glTexCoord2i:
+  return_type: [void]
+  parameters:
+  - [GLint, s]
+  - [GLint, t]
+glTexCoord2iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glTexCoord2s:
+  return_type: [void]
+  parameters:
+  - [GLshort, s]
+  - [GLshort, t]
+glTexCoord2sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glTexCoord3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, s]
+  - [GLdouble, t]
+  - [GLdouble, r]
+glTexCoord3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glTexCoord3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, s]
+  - [GLfloat, t]
+  - [GLfloat, r]
+glTexCoord3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glTexCoord3i:
+  return_type: [void]
+  parameters:
+  - [GLint, s]
+  - [GLint, t]
+  - [GLint, r]
+glTexCoord3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glTexCoord3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, s]
+  - [GLshort, t]
+  - [GLshort, r]
+glTexCoord3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glTexCoord4d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, s]
+  - [GLdouble, t]
+  - [GLdouble, r]
+  - [GLdouble, q]
+glTexCoord4dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glTexCoord4f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, s]
+  - [GLfloat, t]
+  - [GLfloat, r]
+  - [GLfloat, q]
+glTexCoord4fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glTexCoord4i:
+  return_type: [void]
+  parameters:
+  - [GLint, s]
+  - [GLint, t]
+  - [GLint, r]
+  - [GLint, q]
+glTexCoord4iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glTexCoord4s:
+  return_type: [void]
+  parameters:
+  - [GLshort, s]
+  - [GLshort, t]
+  - [GLshort, r]
+  - [GLshort, q]
+glTexCoord4sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glTexCoordP1ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, coords]
+glTexCoordP1uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glTexCoordP2ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, coords]
+glTexCoordP2uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glTexCoordP3ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, coords]
+glTexCoordP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glTexCoordP4ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, coords]
+glTexCoordP4uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', coords]
+glTexCoordPointer:
+  return_type: [void]
+  parameters:
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glTexEnvf:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, param]
+glTexEnvfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glTexEnvi:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, param]
+glTexEnviv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glTexGend:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [GLdouble, param]
+glTexGendv:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [const, GLdouble, '*', params]
+glTexGenf:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [GLfloat, param]
+glTexGenfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glTexGeni:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [GLint, param]
+glTexGeniv:
+  return_type: [void]
+  parameters:
+  - [GLenum, coord]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glTexImage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, internalformat]
+  - [GLsizei, width]
+  - [GLint, border]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glTexImage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLint, border]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glTexImage2DMultisample:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, samples]
+  - [GLint, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLboolean, fixedsamplelocations]
+glTexImage3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLint, border]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glTexImage3DMultisample:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, samples]
+  - [GLint, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLboolean, fixedsamplelocations]
+glTexParameterIiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glTexParameterIuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLuint, '*', params]
+glTexParameterf:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLfloat, param]
+glTexParameterfv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLfloat, '*', params]
+glTexParameteri:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [GLint, param]
+glTexParameteriv:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLenum, pname]
+  - [const, GLint, '*', params]
+glTexStorage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, levels]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+glTexStorage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, levels]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glTexStorage2DMultisample:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, samples]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLboolean, fixedsamplelocations]
+glTexStorage3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, levels]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+glTexStorage3DMultisample:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLsizei, samples]
+  - [GLenum, internalformat]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLboolean, fixedsamplelocations]
+glTexSubImage1D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLsizei, width]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glTexSubImage2D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glTexSubImage3D:
+  return_type: [void]
+  parameters:
+  - [GLenum, target]
+  - [GLint, level]
+  - [GLint, xoffset]
+  - [GLint, yoffset]
+  - [GLint, zoffset]
+  - [GLsizei, width]
+  - [GLsizei, height]
+  - [GLsizei, depth]
+  - [GLenum, format]
+  - [GLenum, type]
+  - [const, GLvoid, '*', pixels]
+glTextureView:
+  return_type: [void]
+  parameters:
+  - [GLuint, texture]
+  - [GLenum, target]
+  - [GLuint, origtexture]
+  - [GLenum, internalformat]
+  - [GLuint, minlevel]
+  - [GLuint, numlevels]
+  - [GLuint, minlayer]
+  - [GLuint, numlayers]
+glTransformFeedbackVaryings:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLsizei, count]
+  - [const, GLchar, '*', const, '*', varyings]
+  - [GLenum, bufferMode]
+glTranslated:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glTranslatef:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glUniform1d:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLdouble, x]
+glUniform1dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glUniform1f:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLfloat, v0]
+glUniform1fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glUniform1i:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLint, v0]
+glUniform1iv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glUniform1ui:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLuint, v0]
+glUniform1uiv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glUniform2d:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLdouble, x]
+  - [GLdouble, y]
+glUniform2dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glUniform2f:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLfloat, v0]
+  - [GLfloat, v1]
+glUniform2fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glUniform2i:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLint, v0]
+  - [GLint, v1]
+glUniform2iv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glUniform2ui:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLuint, v0]
+  - [GLuint, v1]
+glUniform2uiv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glUniform3d:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glUniform3dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glUniform3f:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLfloat, v0]
+  - [GLfloat, v1]
+  - [GLfloat, v2]
+glUniform3fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glUniform3i:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLint, v0]
+  - [GLint, v1]
+  - [GLint, v2]
+glUniform3iv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glUniform3ui:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLuint, v0]
+  - [GLuint, v1]
+  - [GLuint, v2]
+glUniform3uiv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glUniform4d:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+  - [GLdouble, w]
+glUniform4dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLdouble, '*', value]
+glUniform4f:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLfloat, v0]
+  - [GLfloat, v1]
+  - [GLfloat, v2]
+  - [GLfloat, v3]
+glUniform4fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', value]
+glUniform4i:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLint, v0]
+  - [GLint, v1]
+  - [GLint, v2]
+  - [GLint, v3]
+glUniform4iv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLint, '*', value]
+glUniform4ui:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLuint, v0]
+  - [GLuint, v1]
+  - [GLuint, v2]
+  - [GLuint, v3]
+glUniform4uiv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [const, GLuint, '*', value]
+glUniformBlockBinding:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+  - [GLuint, uniformBlockIndex]
+  - [GLuint, uniformBlockBinding]
+glUniformMatrix2dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix2fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix2x3dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix2x3fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix2x4dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix2x4fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix3dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix3fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix3x2dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix3x2fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix3x4dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix3x4fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix4dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix4fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix4x2dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix4x2fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformMatrix4x3dv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLdouble, '*', value]
+glUniformMatrix4x3fv:
+  return_type: [void]
+  parameters:
+  - [GLint, location]
+  - [GLsizei, count]
+  - [GLboolean, transpose]
+  - [const, GLfloat, '*', value]
+glUniformSubroutinesuiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, shadertype]
+  - [GLsizei, count]
+  - [const, GLuint, '*', indices]
+glUnmapBuffer:
+  return_type: [GLboolean]
+  parameters:
+  - [GLenum, target]
+glUseProgram:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+glUseProgramStages:
+  return_type: [void]
+  parameters:
+  - [GLuint, pipeline]
+  - [GLbitfield, stages]
+  - [GLuint, program]
+glValidateProgram:
+  return_type: [void]
+  parameters:
+  - [GLuint, program]
+glValidateProgramPipeline:
+  return_type: [void]
+  parameters:
+  - [GLuint, pipeline]
+glVertex2d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+glVertex2dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glVertex2f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+glVertex2fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glVertex2i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+glVertex2iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glVertex2s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+glVertex2sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glVertex3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glVertex3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glVertex3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glVertex3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glVertex3i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+glVertex3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glVertex3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+glVertex3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glVertex4d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+  - [GLdouble, w]
+glVertex4dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glVertex4f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+  - [GLfloat, w]
+glVertex4fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glVertex4i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+  - [GLint, w]
+glVertex4iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glVertex4s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+  - [GLshort, w]
+glVertex4sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glVertexAttrib1d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+glVertexAttrib1dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttrib1f:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLfloat, x]
+glVertexAttrib1fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLfloat, '*', v]
+glVertexAttrib1s:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLshort, x]
+glVertexAttrib1sv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLshort, '*', v]
+glVertexAttrib2d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+  - [GLdouble, y]
+glVertexAttrib2dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttrib2f:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLfloat, x]
+  - [GLfloat, y]
+glVertexAttrib2fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLfloat, '*', v]
+glVertexAttrib2s:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLshort, x]
+  - [GLshort, y]
+glVertexAttrib2sv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLshort, '*', v]
+glVertexAttrib3d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glVertexAttrib3dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttrib3f:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glVertexAttrib3fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLfloat, '*', v]
+glVertexAttrib3s:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+glVertexAttrib3sv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLshort, '*', v]
+glVertexAttrib4Nbv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLbyte, '*', v]
+glVertexAttrib4Niv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glVertexAttrib4Nsv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLshort, '*', v]
+glVertexAttrib4Nub:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLubyte, x]
+  - [GLubyte, y]
+  - [GLubyte, z]
+  - [GLubyte, w]
+glVertexAttrib4Nubv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLubyte, '*', v]
+glVertexAttrib4Nuiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLuint, '*', v]
+glVertexAttrib4Nusv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLushort, '*', v]
+glVertexAttrib4bv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLbyte, '*', v]
+glVertexAttrib4d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+  - [GLdouble, w]
+glVertexAttrib4dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttrib4f:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+  - [GLfloat, w]
+glVertexAttrib4fv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLfloat, '*', v]
+glVertexAttrib4iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glVertexAttrib4s:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+  - [GLshort, w]
+glVertexAttrib4sv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLshort, '*', v]
+glVertexAttrib4ubv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLubyte, '*', v]
+glVertexAttrib4uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLuint, '*', v]
+glVertexAttrib4usv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLushort, '*', v]
+glVertexAttribBinding:
+  return_type: [void]
+  parameters:
+  - [GLuint, attribindex]
+  - [GLuint, bindingindex]
+glVertexAttribDivisor:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLuint, divisor]
+glVertexAttribFormat:
+  return_type: [void]
+  parameters:
+  - [GLuint, attribindex]
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [GLuint, relativeoffset]
+glVertexAttribI1i:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, x]
+glVertexAttribI1iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glVertexAttribI1ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLuint, x]
+glVertexAttribI1uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLuint, '*', v]
+glVertexAttribI2i:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, x]
+  - [GLint, y]
+glVertexAttribI2iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glVertexAttribI2ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLuint, x]
+  - [GLuint, y]
+glVertexAttribI2uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLuint, '*', v]
+glVertexAttribI3i:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+glVertexAttribI3iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glVertexAttribI3ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLuint, x]
+  - [GLuint, y]
+  - [GLuint, z]
+glVertexAttribI3uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLuint, '*', v]
+glVertexAttribI4bv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLbyte, '*', v]
+glVertexAttribI4i:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+  - [GLint, w]
+glVertexAttribI4iv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLint, '*', v]
+glVertexAttribI4sv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLshort, '*', v]
+glVertexAttribI4ubv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLubyte, '*', v]
+glVertexAttribI4ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLuint, x]
+  - [GLuint, y]
+  - [GLuint, z]
+  - [GLuint, w]
+glVertexAttribI4uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLuint, '*', v]
+glVertexAttribI4usv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLushort, '*', v]
+glVertexAttribIFormat:
+  return_type: [void]
+  parameters:
+  - [GLuint, attribindex]
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLuint, relativeoffset]
+glVertexAttribIPointer:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glVertexAttribL1d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+glVertexAttribL1dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttribL2d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+  - [GLdouble, y]
+glVertexAttribL2dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttribL3d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glVertexAttribL3dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttribL4d:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+  - [GLdouble, w]
+glVertexAttribL4dv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLdouble, '*', v]
+glVertexAttribLFormat:
+  return_type: [void]
+  parameters:
+  - [GLuint, attribindex]
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLuint, relativeoffset]
+glVertexAttribLPointer:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glVertexAttribP1ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [GLuint, value]
+glVertexAttribP1uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [const, GLuint, '*', value]
+glVertexAttribP2ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [GLuint, value]
+glVertexAttribP2uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [const, GLuint, '*', value]
+glVertexAttribP3ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [GLuint, value]
+glVertexAttribP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [const, GLuint, '*', value]
+glVertexAttribP4ui:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [GLuint, value]
+glVertexAttribP4uiv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [const, GLuint, '*', value]
+glVertexAttribPointer:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLboolean, normalized]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glVertexBindingDivisor:
+  return_type: [void]
+  parameters:
+  - [GLuint, bindingindex]
+  - [GLuint, divisor]
+glVertexP2ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, value]
+glVertexP2uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', value]
+glVertexP3ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, value]
+glVertexP3uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', value]
+glVertexP4ui:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [GLuint, value]
+glVertexP4uiv:
+  return_type: [void]
+  parameters:
+  - [GLenum, type]
+  - [const, GLuint, '*', value]
+glVertexPointer:
+  return_type: [void]
+  parameters:
+  - [GLint, size]
+  - [GLenum, type]
+  - [GLsizei, stride]
+  - [const, GLvoid, '*', pointer]
+glViewport:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLsizei, width]
+  - [GLsizei, height]
+glViewportArrayv:
+  return_type: [void]
+  parameters:
+  - [GLuint, first]
+  - [GLsizei, count]
+  - [const, GLfloat, '*', v]
+glViewportIndexedf:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, w]
+  - [GLfloat, h]
+glViewportIndexedfv:
+  return_type: [void]
+  parameters:
+  - [GLuint, index]
+  - [const, GLfloat, '*', v]
+glWaitSync:
+  return_type: [void]
+  parameters:
+  - [GLsync, sync]
+  - [GLbitfield, flags]
+  - [GLuint64, timeout]
+glWindowPos2d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+glWindowPos2dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glWindowPos2f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+glWindowPos2fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glWindowPos2i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+glWindowPos2iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glWindowPos2s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+glWindowPos2sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
+glWindowPos3d:
+  return_type: [void]
+  parameters:
+  - [GLdouble, x]
+  - [GLdouble, y]
+  - [GLdouble, z]
+glWindowPos3dv:
+  return_type: [void]
+  parameters:
+  - [const, GLdouble, '*', v]
+glWindowPos3f:
+  return_type: [void]
+  parameters:
+  - [GLfloat, x]
+  - [GLfloat, y]
+  - [GLfloat, z]
+glWindowPos3fv:
+  return_type: [void]
+  parameters:
+  - [const, GLfloat, '*', v]
+glWindowPos3i:
+  return_type: [void]
+  parameters:
+  - [GLint, x]
+  - [GLint, y]
+  - [GLint, z]
+glWindowPos3iv:
+  return_type: [void]
+  parameters:
+  - [const, GLint, '*', v]
+glWindowPos3s:
+  return_type: [void]
+  parameters:
+  - [GLshort, x]
+  - [GLshort, y]
+  - [GLshort, z]
+glWindowPos3sv:
+  return_type: [void]
+  parameters:
+  - [const, GLshort, '*', v]
