@@ -12,7 +12,7 @@ module OpenGL
         version = mod.glGetString(mod::GL_VERSION)[/\d+.\d+/].split('.')
         version.map!(&:to_i)
         # add features
-        API::GLES2FeatureLoader.new(version).add_to(builder)
+        API::GLES2[version].add_to(builder)
         # TODO: add extensions
       end
     end
