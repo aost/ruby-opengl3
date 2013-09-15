@@ -5,12 +5,12 @@
 OpenGL wrapper library for Ruby
 
 * Pure Ruby, no C/C++/Java extension included (thanks to ffi gem)
-* OpenGL 2.1 ~ 4.4
-* Ruby-style wrapper (not complete)
+* Modern OpenGL
+* Ruby-style wrapper
 
 Tested on
 
-* OS X Mountain Lion (MRI 2.0.0, JRuby 1.7)
+* OS X Mountain Lion (MRI 2.0.0, JRuby 1.7.4)
 
 ## Installation
 
@@ -28,7 +28,7 @@ Or install it yourself as:
 
 ## Examples
 
-Sample codes are in `platform/ruby` and `platform/jruby`
+Sample codes are in `samples/ruby` and `samples/jruby`
 
 ```RUBY
 require 'opengl'
