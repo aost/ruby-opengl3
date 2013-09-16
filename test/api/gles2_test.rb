@@ -7,8 +7,8 @@ class API_GLES2Test < MiniTest::Test
     mod = OpenGL::API::Builder.build(Context.new) do |builder|
       OpenGL::API::GLES2[2,0].add_to(builder)
     end
-    assert_includes mod.constants, :GL_SHADER_BINARY_FORMATS
-    assert_includes mod.constants, :GL_TEXTURE_2D
+    assert_operator mod, :const_defined?, :GL_SHADER_BINARY_FORMATS
+    assert_operator mod, :const_defined?, :GL_TEXTURE_2D
     assert_respond_to mod, :glUseProgram
     assert_respond_to mod, :glShaderBinary
     assert_respond_to mod, :glVertexAttribPointer

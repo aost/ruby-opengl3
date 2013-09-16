@@ -2,6 +2,8 @@
 
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/davll/ruby-opengl)
 
+[![Build Status](https://travis-ci.org/davll/ruby-opengl.png?branch=master)](https://travis-ci.org/davll/ruby-opengl)
+
 OpenGL wrapper library for Ruby
 
 * Pure Ruby, no C/C++/Java extension included (thanks to ffi gem)

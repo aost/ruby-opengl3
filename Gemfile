@@ -1,3 +1,7 @@
 source 'https://rubygems.org'
-gem 'opengl3', path: '../opengl3'
+# opengl3
+gemspec
+# test deps
+gem 'rake'
+# ruby runtime
 gem 'glfw3', platform: :ruby

@@ -19,7 +19,5 @@ Gem::Specification.new do |gem|
   
   gem.required_ruby_version = ">= 1.9.2"
   gem.add_dependency "ffi", ">= 1.2.0"
-  # gem.add_development_dependency "rake"
   gem.add_development_dependency "minitest", ">= 5.0.0"
-  # gem.add_development_dependency "nokogiri"
 end
