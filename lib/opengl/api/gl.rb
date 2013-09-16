@@ -7,7 +7,7 @@ module OpenGL::API
     
     def each_feature
       Dir[File.expand_path('../gl/*.yml', __FILE__)].each do |path|
-        yield File.open(path){|io| YAML.load(io) }
+        super(path)
       end
     end
     

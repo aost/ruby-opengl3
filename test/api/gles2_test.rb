@@ -20,11 +20,11 @@ class API_GLES2Test < MiniTest::Test
     end
     
     # 2.0
-    assert_includes mod.constants, :GL_TRIANGLES
+    assert_operator mod, :const_defined?, :GL_TRIANGLES
     assert_respond_to mod, :glEnableVertexAttribArray
     # 3.0
-    assert_includes mod.constants, :GL_RG
-    assert_includes mod.constants, :GL_UNIFORM_BUFFER
+    assert_operator mod, :const_defined?, :GL_RG
+    assert_operator mod, :const_defined?, :GL_UNIFORM_BUFFER
     assert_respond_to mod, :glBindSampler
     assert_respond_to mod, :glWaitSync
   end

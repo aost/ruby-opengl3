@@ -12,8 +12,8 @@ module OpenGL::API
       each_feature do |feature|
         # compare version
         version_cmp = (feature['version'] <=> version)
-        # quit the loop if the version is greater than you want
-        break if version_cmp > 0
+        # skip the loop if the version is greater than you want
+        next if version_cmp > 0
         # feed constants and functions
         feature['constants'].each {|n| builder.add_constant(n) }
         feature['functions'].each {|n| builder.add_function(n) }
@@ -22,8 +22,8 @@ module OpenGL::API
     
     protected
     
-    def each_feature
-      file = File.open(filename)
+    def each_feature(filename = nil)
+      file = File.open(filename || self.filename)
       YAML.load_documents(file) {|doc|
         yield doc
       }
