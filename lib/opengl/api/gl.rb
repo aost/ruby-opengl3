@@ -5,9 +5,9 @@ module OpenGL::API
     
     protected
     
-    def each_feature
+    def each_feature(&block)
       Dir[File.expand_path('../gl/*.yml', __FILE__)].each do |path|
-        super(path)
+        super(path, &block)
       end
     end
     
