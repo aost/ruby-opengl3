@@ -5,8 +5,10 @@ rvm:
 - 'jruby-19mode'
 - 'rbx-19mode'
 script:
-- "bundle exec rake test"
-- "bundle exec rake test:gui"
+- "bundle exec rake $RAKE_TEST_TASK"
+env:
+- "RAKE_TEST_TASK=test"
+- "RAKE_TEST_TASK=test:gui"
 before_install:
 - "sudo apt-get install libX11-dev xorg-dev libgl1-mesa-dev"
 - "export CFLAGS=-fPIC $CFLAGS"
