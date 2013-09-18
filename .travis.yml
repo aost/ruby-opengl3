@@ -25,4 +25,6 @@ before_script:
 matrix:
   allow_failures:
   - rvm: 'jruby-19mode'
+    env: 'RAKE_TEST_TASK=test:gui'
   - rvm: 'rbx-19mode'
+    env: 'RAKE_TEST_TASK=test:gui'
