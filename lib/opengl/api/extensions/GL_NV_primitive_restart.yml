@@ -1,0 +1,10 @@
+---
+name: GL_NV_primitive_restart
+constants:
+- [GL_PRIMITIVE_RESTART_NV, GL_PRIMITIVE_RESTART]
+- [GL_PRIMITIVE_RESTART_INDEX_NV, GL_PRIMITIVE_RESTART_INDEX]
+functions:
+- - glPrimitiveRestartNV
+  - return_type: [void]
+    parameters: []
+- [glPrimitiveRestartIndexNV, glPrimitiveRestartIndex]

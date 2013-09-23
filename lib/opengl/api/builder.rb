@@ -51,16 +51,16 @@ module OpenGL::API
     attr_reader :context
     
     # Public: Add Constant
-    def add_constant(name, orig_name = nil)
+    def add_constant(name, orig_name = nil, options = {})
       orig_name ||= name
-      value = constants.fetch(orig_name)
+      value = options[:value] || constants.fetch(orig_name)
       @context.add_constant(name, orig_name, value)
     end
     
     # Public: Add Function
-    def add_function(name, orig_name = nil)
+    def add_function(name, orig_name = nil, options = {})
       orig_name ||= name
-      info = functions.fetch(orig_name)
+      info = options[:decl] || functions.fetch(orig_name)
       @context.add_function(name, orig_name, info)
     end
     

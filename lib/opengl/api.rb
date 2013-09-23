@@ -9,5 +9,8 @@ module OpenGL
     autoload :GL, File.join(root, 'gl')
     autoload :GLES2, File.join(root, 'gles2')
     
+    # Extensions
+    autoload :Extension, File.join(root, 'extension')
+    
   end
 end

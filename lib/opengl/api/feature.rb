@@ -1,6 +1,11 @@
 module OpenGL::API
-  # Internal: Abstract Feature Loader
-  class AbstractFeatureLoader
+  # Internal: Abstract Feature
+  class AbstractFeature
+    
+    private_class_method :new
+    def self.[](*version)
+      new(version.flatten)
+    end
     
     attr_reader :version
     
@@ -35,5 +40,5 @@ module OpenGL::API
     
   end
   
-  private_constant :AbstractFeatureLoader
+  private_constant :AbstractFeature
 end

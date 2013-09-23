@@ -1,7 +1,7 @@
-require_relative 'feature_loader'
+require_relative 'feature'
 module OpenGL::API
-  # Internal: OpenGL Feature Loader
-  class GLFeatureLoader < AbstractFeatureLoader
+  # Public: OpenGL Feature Loader
+  class GL < AbstractFeature
     
     protected
     
@@ -11,13 +11,5 @@ module OpenGL::API
       end
     end
     
-  end
-  private_constant :GLFeatureLoader
-  
-  # Public: OpenGL Feature Loader
-  module GL
-    def self.[](*version)
-      GLFeatureLoader.new(version.flatten)
-    end
   end
 end
