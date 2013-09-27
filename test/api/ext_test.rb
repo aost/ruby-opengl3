@@ -14,13 +14,20 @@ class API_ExtTest < MiniTest::Test
   end
   
   def test_ext2
-    mod = OpenGL::API::Builder.build(Context.new) do |builder|
-      OpenGL::API::Extension['GL_EXT_texture_compression_s3tc'].add_to builder
+    mod = OpenGL::API::Builder.build(Context.new) do |b|
+      OpenGL::API::Extension['GL_EXT_texture_compression_s3tc'].add_to(b)
+      OpenGL::API::Extension['GL_EXT_texture_filter_anisotropic'].add_to(b)
     end
     assert_operator mod, :const_defined?, :GL_COMPRESSED_RGB_S3TC_DXT1_EXT
     assert_operator mod, :const_defined?, :GL_COMPRESSED_RGBA_S3TC_DXT1_EXT
     assert_operator mod, :const_defined?, :GL_COMPRESSED_RGBA_S3TC_DXT3_EXT
     assert_operator mod, :const_defined?, :GL_COMPRESSED_RGBA_S3TC_DXT5_EXT
+    assert_operator mod, :const_defined?, :GL_COMPRESSED_SRGB_S3TC_DXT1_EXT
+    assert_operator mod, :const_defined?, :GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT
+    assert_operator mod, :const_defined?, :GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT
+    assert_operator mod, :const_defined?, :GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT
+    assert_operator mod, :const_defined?, :GL_TEXTURE_MAX_ANISOTROPY_EXT
+    assert_operator mod, :const_defined?, :GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT
   end
   
 end
