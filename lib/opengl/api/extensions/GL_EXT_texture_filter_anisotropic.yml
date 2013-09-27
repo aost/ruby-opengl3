@@ -1,0 +1,6 @@
+---
+name: GL_EXT_texture_filter_anisotropic
+constants:
+- [GL_TEXTURE_MAX_ANISOTROPY_EXT]
+- [GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT]
+functions: []
