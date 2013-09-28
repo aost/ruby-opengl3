@@ -67,6 +67,7 @@ module OpenGL::API
     # Internal:
     def initialize(context)
       @context = context
+      context.bootstrap(self) if context.respond_to? :bootstrap
     end
     
     private

@@ -1,21 +1,13 @@
 module OpenGL
   module FFI
     # Public: OpenGL ES Module Factory
-    GLES2 = Object.new
+    GLES2 = GL.dup
     
-    def GLES2.create
-      API::Builder.build(BuilderContext.new) do |builder|
-        # check version
-        builder.add_constant 'GL_VERSION'
-        builder.add_function 'glGetString'
-        mod = builder.context.module
-        version = mod.glGetString(mod::GL_VERSION)[/\d+.\d+/].split('.')
-        version.map!(&:to_i)
-        # add features
-        API::GLES2[version].add_to(builder)
-        # TODO: add extensions
-      end
+    # Internal:
+    def GLES2.api(version)
+      API::GLES2[version]
     end
     
+    GLES2.freeze
   end
 end
