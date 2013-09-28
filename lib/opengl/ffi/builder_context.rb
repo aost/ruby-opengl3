@@ -39,14 +39,16 @@ module OpenGL::FFI
                  else :core
                  end
       # add some attributes to the module
-      _version, _extensions = @version, @extensions
+      _version, _profile, _extensions = @version, @profile, @extensions
       mod.define_singleton_method(:version){ _version }
+      mod.define_singleton_method(:profile){ _profile }
       mod.define_singleton_method(:extensions){ _extensions }
     end
     
     def add_constant(name, orig_name, value)
-      unless @module.const_defined? name
-        @module.const_set(name.to_sym, value)
+      name = name.to_sym
+      @module.tap do |mod|
+        mod.const_set(name, value) unless mod.const_defined? name
       end
     end
     
