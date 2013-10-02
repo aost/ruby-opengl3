@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = "https://github.com/davll/ruby-opengl"
   
   files = `git ls-files`.split($/)
-  lib_files = files.select{|x| File.fnmatch? 'lib/**/*', x }
+  lib_files = files.select{|x| File.fnmatch? 'lib/*', x }
   gem.files         = lib_files + %w(LICENSE)
   gem.require_paths = %w(lib)
   

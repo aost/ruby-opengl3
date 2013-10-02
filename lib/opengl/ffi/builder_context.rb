@@ -27,7 +27,10 @@ module OpenGL::FFI
                       builder.add_constant 'GL_NUM_EXTENSIONS'
                       builder.add_function 'glGetStringi'
                       builder.add_function 'glGetIntegerv'
-                      n = glGetIntegerv(mod::GL_NUM_EXTENSIONS)
+                      n = ::FFI::Buffer.new_in(:GLint, 1) do |ptr|
+                            glGetIntegerv(mod::GL_NUM_EXTENSIONS, ptr)
+                            ptr.read_int32
+                          end
                       n.times.map{|i| glGetStringi(mod::GL_EXTENSIONS, i) }
                     end
       @extensions.freeze
