@@ -18,7 +18,11 @@ module OpenGL::FFI
       
       def self.parse_ret_type(type_ary)
         return type_ary[0].to_sym if type_ary.count == 1
-        raise RuntimeError, "invalid ret_type: #{type_ary.inspect}"
+        case type_ary
+        when %w(const GLubyte *) then :string
+        when %w(void *) then :pointer
+        else raise RuntimeError, "invalid ret_type: #{type_ary.inspect}"
+        end
       end
       
       def self.parse_param_type(type_ary)

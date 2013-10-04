@@ -2092,11 +2092,11 @@ glGetShaderiv:
   - [GLenum, pname]
   - [out, GLint, '*', params]
 glGetString:
-  return_type: [string]
+  return_type: [const, GLubyte, '*']
   parameters:
   - [GLenum, name]
 glGetStringi:
-  return_type: [string]
+  return_type: [const, GLubyte, '*']
   parameters:
   - [GLenum, name]
   - [GLuint, index]
@@ -2602,12 +2602,12 @@ glMap2f:
   - [GLint, vorder]
   - [in, GLfloat, '*', points]
 glMapBuffer:
-  return_type: [pointer]
+  return_type: [void, '*']
   parameters:
   - [GLenum, target]
   - [GLenum, access]
 glMapBufferRange:
-  return_type: [pointer]
+  return_type: [void, '*']
   parameters:
   - [GLenum, target]
   - [GLintptr, offset]
