@@ -24,8 +24,8 @@ module OpenGL::FFI
       def self.parse_param_type(type_ary)
         ty = type_ary.dup
         ptr = ty.select{|t| t == '*' }.count
-        dir = ty.select{|t| t == 'const' }.empty? ? :out : :in
-        ty.reject!{|t| t == '*' || t == 'const' }
+        dir = ty.select{|t| t == 'in' }.empty? ? :out : :in
+        ty.reject!{|t| t == '*' || t == 'in' || t == 'out' }
         raise unless ty.count == 1
         if ptr > 0
           # ty << :pointer while (ptr -= 1) > 0

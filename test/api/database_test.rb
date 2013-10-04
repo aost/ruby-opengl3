@@ -12,8 +12,9 @@ class API_DatabaseTest < MiniTest::Test
       assert_kind_of Hash, builder.send(:functions)
       # check constants
       builder.send(:constants).each do |name, value|
-        assert_kind_of String, name
-        assert_kind_of Integer, value
+        msg = "Constant: #{ name }"
+        assert_kind_of String, name, msg
+        assert_kind_of Integer, value, msg
       end
       # check functions
       builder.send(:functions).each do |name, info|
@@ -24,34 +25,41 @@ class API_DatabaseTest < MiniTest::Test
         assert_kind_of Array, info['return_type']
         assert_kind_of Array, info['parameters']
         # check return type
-        assert_return_type info['return_type']
+        assert_return_type info['return_type'], func: name
         # check parameters
         info['parameters'].each{|p|
           assert_kind_of Array, p
-          # check param type
-          assert_parameter_type p[0..-2]
           # check param name
           assert_kind_of String, p.last
           assert_match /\A\w+\z/, p.last
+          # check param type
+          assert_parameter_type p[0..-2], func: name, name: p.last
         }
       end
     end
   end
   
-  def assert_return_type(type_ary)
-    assert_equal 1, type_ary.length
-    assert_kind_of String, type_ary[-1]
+  def assert_return_type(type_ary, options)
+    msg = "Function: #{ options[:func] }"
+    assert_equal 1, type_ary.length, msg
+    assert_kind_of String, type_ary[-1], msg
     assert_includes %w(
       void string pointer
       GLenum GLboolean GLint GLuint GLsync
-    ), type_ary[-1]
+    ), type_ary[-1], msg
   end
   
-  def assert_parameter_type(type_ary)
-    type_ary.each{|t|
-      assert_kind_of String, t
-      assert_match /\A(\w+|\*)\z/, t
-    }
+  def assert_parameter_type(type_ary, options)
+    msg = "Funcion: #{ options[:func] }, Parameter: #{ options[:name] }"
+    assert_operator 1, :<=, type_ary.length, msg
+    type_ary.each{|t| assert_kind_of String, t, msg }
+    base = []
+    base << type_ary.pop while '*' == type_ary[-1]
+    base << type_ary.pop
+    assert_match /\A\w+\z/, base.last, msg
+    if base.any?{|o| o == '*' } # pointer type
+      assert_match /\A(in|out)\z/, type_ary[0], msg
+    end
   end
   
 end
