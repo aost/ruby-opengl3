@@ -22,7 +22,9 @@ class API_DatabaseTest < MiniTest::Test
         assert_kind_of Hash, info
         assert_includes info, 'return_type'
         assert_includes info, 'parameters'
-        assert_kind_of Array, info['return_type']
+        info['return_type'].tap{|rt|
+          rt.nil? or assert_kind_of(Array, rt)
+        }
         assert_kind_of Array, info['parameters']
         # check return type
         assert_return_type info['return_type'], func: name
@@ -41,9 +43,8 @@ class API_DatabaseTest < MiniTest::Test
   
   def assert_return_type(type_ary, options)
     msg = "Function: #{ options[:func] }"
-    type_ary.each{|t| assert_kind_of String, t, msg }
     case type_ary
-    when %w(void) then true
+    when nil then true
     when %w(const GLubyte *) then true
     when %w(void *) then true
     when %w(GLenum) then true

@@ -17,6 +17,7 @@ module OpenGL::FFI
     module PRIVATE
       
       def self.parse_ret_type(type_ary)
+        return :void unless type_ary
         return type_ary[0].to_sym if type_ary.count == 1
         case type_ary
         when %w(const GLubyte *) then :string
