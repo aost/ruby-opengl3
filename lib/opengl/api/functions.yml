@@ -62,7 +62,7 @@ glBindAttribLocation:
   parameters:
   - [GLuint, program]
   - [GLuint, index]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glBindBuffer:
   return_type: [void]
   parameters:
@@ -103,14 +103,14 @@ glBindFragDataLocation:
   parameters:
   - [GLuint, program]
   - [GLuint, color]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glBindFragDataLocationIndexed:
   return_type: [void]
   parameters:
   - [GLuint, program]
   - [GLuint, colorNumber]
   - [GLuint, index]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glBindFramebuffer:
   return_type: [void]
   parameters:
@@ -1592,7 +1592,7 @@ glGetAttribLocation:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetBooleani_v:
   return_type: [void]
   parameters:
@@ -1718,12 +1718,12 @@ glGetFragDataIndex:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetFragDataLocation:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetFramebufferAttachmentParameteriv:
   return_type: [void]
   parameters:
@@ -1942,19 +1942,19 @@ glGetProgramResourceIndex:
   parameters:
   - [GLuint, program]
   - [GLenum, programInterface]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetProgramResourceLocation:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
   - [GLenum, programInterface]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetProgramResourceLocationIndex:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
   - [GLenum, programInterface]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetProgramResourceName:
   return_type: [void]
   parameters:
@@ -2105,13 +2105,13 @@ glGetSubroutineIndex:
   parameters:
   - [GLuint, program]
   - [GLenum, shadertype]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetSubroutineUniformLocation:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
   - [GLenum, shadertype]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetSynciv:
   return_type: [void]
   parameters:
@@ -2210,7 +2210,7 @@ glGetUniformBlockIndex:
   return_type: [GLuint]
   parameters:
   - [GLuint, program]
-  - [string, uniformBlockName]
+  - [const, GLchar, '*', uniformBlockName]
 glGetUniformIndices:
   return_type: [void]
   parameters:
@@ -2222,7 +2222,7 @@ glGetUniformLocation:
   return_type: [GLint]
   parameters:
   - [GLuint, program]
-  - [string, name]
+  - [const, GLchar, '*', name]
 glGetUniformSubroutineuiv:
   return_type: [void]
   parameters:
