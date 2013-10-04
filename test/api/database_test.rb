@@ -41,12 +41,18 @@ class API_DatabaseTest < MiniTest::Test
   
   def assert_return_type(type_ary, options)
     msg = "Function: #{ options[:func] }"
-    assert_equal 1, type_ary.length, msg
-    assert_kind_of String, type_ary[-1], msg
-    assert_includes %w(
-      void string pointer
-      GLenum GLboolean GLint GLuint GLsync
-    ), type_ary[-1], msg
+    type_ary.each{|t| assert_kind_of String, t, msg }
+    case type_ary
+    when %w(void) then true
+    when %w(const GLubyte *) then true
+    when %w(void *) then true
+    when %w(GLenum) then true
+    when %w(GLboolean) then true
+    when %w(GLint) then true
+    when %w(GLuint) then true
+    when %w(GLsync) then true
+    else flunk "Illegal Return Type: [#{ type_ary.join(', ') }] (#{msg})"
+    end
   end
   
   def assert_parameter_type(type_ary, options)
