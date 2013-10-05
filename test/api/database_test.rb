@@ -22,13 +22,10 @@ class API_DatabaseTest < MiniTest::Test
         assert_kind_of Hash, info
         assert_includes info, 'return_type'
         assert_includes info, 'parameters'
-        info['return_type'].tap{|rt|
-          rt.nil? or assert_kind_of(Array, rt)
-        }
-        assert_kind_of Array, info['parameters']
         # check return type
-        assert_return_type info['return_type'], func: name
+        assert_return_type name, info
         # check parameters
+        assert_kind_of Array, info['parameters']
         info['parameters'].each{|p|
           assert_kind_of Array, p
           # check param name
@@ -41,19 +38,20 @@ class API_DatabaseTest < MiniTest::Test
     end
   end
   
-  def assert_return_type(type_ary, options)
-    msg = "Function: #{ options[:func] }"
-    case type_ary
-    when nil then true
-    when %w(const GLubyte *) then true
-    when %w(void *) then true
-    when %w(GLenum) then true
-    when %w(GLboolean) then true
-    when %w(GLint) then true
-    when %w(GLuint) then true
-    when %w(GLsync) then true
-    else flunk "Illegal Return Type: [#{ type_ary.join(', ') }] (#{msg})"
-    end
+  def assert_return_type(name, info)
+    ret_type = info['return_type']
+    ret_type_rb = (info['ruby'] || {})['__return']
+    assert case ret_type
+           when nil
+             ret_type_rb.nil?
+           when /\AGL(enum|boolean|int|uint|sync)\z/
+             ret_type_rb.nil?
+           when %w(const GLubyte *)
+             ret_type_rb == 'string'
+           when %w(void *)
+             ret_type_rb.nil?
+           else false
+           end, "Invalid ret type #{info['return_type'].inspect} of #{name}"
   end
   
   def assert_parameter_type(type_ary, options)

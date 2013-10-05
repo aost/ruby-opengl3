@@ -19,7 +19,7 @@ glAlphaFunc:
   - [GLenum, func]
   - [GLfloat, ref]
 glAreTexturesResident:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLsizei, n]
   - [in, GLuint, '*', textures]
@@ -301,7 +301,7 @@ glCallLists:
   - [GLenum, type]
   - [in, GLvoid, '*', lists]
 glCheckFramebufferStatus:
-  return_type: [GLenum]
+  return_type: GLenum
   parameters:
   - [GLenum, target]
 glClampColor:
@@ -413,7 +413,7 @@ glClientActiveTexture:
   parameters:
   - [GLenum, texture]
 glClientWaitSync:
-  return_type: [GLenum]
+  return_type: GLenum
   parameters:
   - [GLsync, sync]
   - [GLbitfield, flags]
@@ -905,14 +905,14 @@ glCopyTexSubImage3D:
   - [GLsizei, width]
   - [GLsizei, height]
 glCreateProgram:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters: []
 glCreateShader:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLenum, type]
 glCreateShaderProgramv:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLenum, type]
   - [GLsizei, count]
@@ -1326,7 +1326,7 @@ glFeedbackBuffer:
   - [GLenum, type]
   - [out, GLfloat, '*', buffer]
 glFenceSync:
-  return_type: [GLsync]
+  return_type: GLsync
   parameters:
   - [GLenum, condition]
   - [GLbitfield, flags]
@@ -1461,7 +1461,7 @@ glGenFramebuffers:
   - [GLsizei, n]
   - [out, GLuint, '*', framebuffers]
 glGenLists:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLsizei, range]
 glGenProgramPipelines:
@@ -1595,7 +1595,7 @@ glGetAttachedShaders:
   - [out, GLsizei, '*', count]
   - [out, GLuint, '*', shaders]
 glGetAttribLocation:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [in, GLchar, '*', name]
@@ -1685,7 +1685,7 @@ glGetConvolutionParameteriv:
   - [GLenum, pname]
   - [out, GLint, '*', params]
 glGetDebugMessageLog:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLuint, count]
   - [GLsizei, bufSize]
@@ -1707,7 +1707,7 @@ glGetDoublev:
   - [GLenum, pname]
   - [out, GLdouble, '*', params]
 glGetError:
-  return_type: [GLenum]
+  return_type: GLenum
   parameters: []
 glGetFloati_v:
   return_type: null
@@ -1721,12 +1721,12 @@ glGetFloatv:
   - [GLenum, pname]
   - [out, GLfloat, '*', params]
 glGetFragDataIndex:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [in, GLchar, '*', name]
 glGetFragDataLocation:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [in, GLchar, '*', name]
@@ -1944,19 +1944,19 @@ glGetProgramPipelineiv:
   - [GLenum, pname]
   - [out, GLint, '*', params]
 glGetProgramResourceIndex:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLuint, program]
   - [GLenum, programInterface]
   - [in, GLchar, '*', name]
 glGetProgramResourceLocation:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [GLenum, programInterface]
   - [in, GLchar, '*', name]
 glGetProgramResourceLocationIndex:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [GLenum, programInterface]
@@ -2111,13 +2111,13 @@ glGetStringi:
   ruby:
     __return: string
 glGetSubroutineIndex:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLuint, program]
   - [GLenum, shadertype]
   - [in, GLchar, '*', name]
 glGetSubroutineUniformLocation:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [GLenum, shadertype]
@@ -2217,7 +2217,7 @@ glGetTransformFeedbackVarying:
   - [out, GLenum, '*', type]
   - [out, GLchar, '*', name]
 glGetUniformBlockIndex:
-  return_type: [GLuint]
+  return_type: GLuint
   parameters:
   - [GLuint, program]
   - [in, GLchar, '*', uniformBlockName]
@@ -2231,7 +2231,7 @@ glGetUniformIndices:
   - [in, GLchar, '*', '*', uniformNames]
   - [out, GLuint, '*', uniformIndices]
 glGetUniformLocation:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLuint, program]
   - [in, GLchar, '*', name]
@@ -2423,64 +2423,64 @@ glInvalidateTexSubImage:
   - [GLsizei, height]
   - [GLsizei, depth]
 glIsBuffer:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, buffer]
 glIsEnabled:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLenum, cap]
 glIsEnabledi:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLenum, target]
   - [GLuint, index]
 glIsFramebuffer:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, framebuffer]
 glIsList:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, list]
 glIsProgram:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, program]
 glIsProgramPipeline:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, pipeline]
 glIsQuery:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, id]
 glIsRenderbuffer:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, renderbuffer]
 glIsSampler:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, sampler]
 glIsShader:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, shader]
 glIsSync:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLsync, sync]
 glIsTexture:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, texture]
 glIsTransformFeedback:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, id]
 glIsVertexArray:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLuint, array]
 glLightModelf:
@@ -3808,7 +3808,7 @@ glReleaseShaderCompiler:
   return_type: null
   parameters: []
 glRenderMode:
-  return_type: [GLint]
+  return_type: GLint
   parameters:
   - [GLenum, mode]
 glRenderbufferStorage:
@@ -4920,7 +4920,7 @@ glUniformSubroutinesuiv:
   - [GLsizei, count]
   - [in, GLuint, '*', indices]
 glUnmapBuffer:
-  return_type: [GLboolean]
+  return_type: GLboolean
   parameters:
   - [GLenum, target]
 glUseProgram:

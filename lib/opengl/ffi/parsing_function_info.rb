@@ -5,26 +5,22 @@ module OpenGL::FFI
     # info - the Hash to parse
     # Returns [param_types, ret_types]
     def parse_function_info(info)
-      ret = PRIVATE.parse_ret_type(info['return_type'])
+      # return type
+      rt = info.fetch('ruby', {})['__return'] ||
+           info['return_type'] ||
+           :void
+      rt = :pointer if rt == %w(void *)
+      return_type = rt.to_sym
+      # parameter types
       params = info['parameters'].map{|p|
                  PRIVATE.parse_param_type(p[0..-2])
                }
       # Result
-      [ params, ret ]
+      [ params, return_type ]
     end
     
     # Internal:
     module PRIVATE
-      
-      def self.parse_ret_type(type_ary)
-        return :void unless type_ary
-        return type_ary[0].to_sym if type_ary.count == 1
-        case type_ary
-        when %w(const GLubyte *) then :string
-        when %w(void *) then :pointer
-        else raise RuntimeError, "invalid ret_type: #{type_ary.inspect}"
-        end
-      end
       
       def self.parse_param_type(type_ary)
         ty = type_ary.dup
