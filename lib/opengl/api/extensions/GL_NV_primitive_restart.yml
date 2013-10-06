@@ -5,6 +5,6 @@ constants:
 - [GL_PRIMITIVE_RESTART_INDEX_NV, GL_PRIMITIVE_RESTART_INDEX]
 functions:
 - - glPrimitiveRestartNV
-  - return_type: [void]
+  - return_type: null
     parameters: []
 - [glPrimitiveRestartIndexNV, glPrimitiveRestartIndex]
