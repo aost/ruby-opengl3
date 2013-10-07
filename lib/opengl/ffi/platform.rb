@@ -1,8 +1,5 @@
-require_relative 'parsing_function_info'
-
 module OpenGL::FFI
   module Platform
-    extend ParsingFunctionInfo
     
     # Internal: Primitive Types
     PRIMITIVE_TYPES = Hash[ %w( GLenum uint32

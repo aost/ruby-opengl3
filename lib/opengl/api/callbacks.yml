@@ -1,0 +1,11 @@
+---
+GLDEBUGPROC:
+  return_type: null
+  parameters:
+  - [GLenum, source]
+  - [GLenum, type]
+  - [GLuint, id]
+  - [GLenum, severity]
+  - [GLsizei, length]
+  - [in, GLchar, '*', message]
+  - [in, void, '*', userParam]

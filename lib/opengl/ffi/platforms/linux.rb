@@ -2,15 +2,13 @@ module OpenGL::FFI
   module Platform
     
     # Internal:
-    def self.attach_function(mod, name, info)
+    def self.get_function(name, param_types, ret_type)
       name = name.to_sym
       @functions ||= {}
       @functions[name] ||= begin
-                             ptypes, rtype = parse_function_info(info)
                              addr = GL.glXGetProcAddressARB(name.to_s)
-                             ::FFI::Function.new(rtype, ptypes, addr)
+                             ::FFI::Function.new(ret_type, param_types, addr)
                            end
-      @functions[name].attach(mod, name.to_s)
     end
     
     # Internal:

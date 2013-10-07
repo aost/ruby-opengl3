@@ -2,14 +2,10 @@ module OpenGL::FFI
   module Platform
     
     # Internal:
-    def self.attach_function(mod, name, info)
+    def self.get_function(name, param_types, ret_type)
       name = name.to_sym
       @functions ||= {}
-      @functions[name] ||= begin
-                             ptypes, rtype = parse_function_info(info)
-                             GL.attach_function(name, ptypes, rtype)
-                           end
-      @functions[name].attach(mod, name.to_s)
+      @functions[name] ||= GL.attach_function(name, param_types, ret_type)
     end
     
     # Internal:

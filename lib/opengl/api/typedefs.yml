@@ -1,0 +1,20 @@
+---
+GLenum: uint32
+GLbitfield: uint32
+GLboolean: uint8
+GLchar: char
+GLbyte: int8
+GLubyte: uint8
+GLshort: int16
+GLushort: uint16
+GLsizei: int32
+GLint: int32
+GLuint: uint32
+GLint64: int64
+GLuint64: uint64
+GLhalf: uint16
+GLfloat: float
+GLdouble: double
+GLsizeiptr: ptrdiff_t
+GLintptr: ptrdiff_t
+GLsync: pointer
