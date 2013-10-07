@@ -24,6 +24,13 @@ before_script:
 - "export DISPLAY=:99.0"
 - "sh -e /etc/init.d/xvfb start"
 matrix:
+  include:
+    - rvm: 'jruby-19mode'
+      jdk: oraclejdk7
+    - rvm: 'jruby-19mode'
+      jdk: openjdk7
+    - rvm: 'jruby-19mode'
+      jdk: openjdk6
   allow_failures:
   - rvm: 'jruby-19mode'
     env: 'RAKE_TEST_TASK=test:gui'
