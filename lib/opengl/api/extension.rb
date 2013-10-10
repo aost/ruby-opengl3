@@ -2,25 +2,28 @@ module OpenGL::API
   class Extension
     
     def self.[](name)
-      raise unless /\A\w+\z/ =~ name
-      path = File.expand_path("../extensions/#{name}.yml", __FILE__)
-      new(name, path)
+      new(name)
     end
     
     private_class_method :new
-    def initialize(name, path)
-      @name, @path = name, path
+    def initialize(name)
+      raise unless /\A\w+\z/ =~ name
+      @name = name
     end
     
     attr_reader :name
     
     def add_to(builder)
       each_doc do |doc|
+        # Check Conditions
+        next unless can_apply?(doc, builder)
+        # Add Constants
         doc['constants'].each {|name, info|
           orig_name = (info.is_a?(String) ? info : nil)
           value = (info.is_a?(Integer) ? info : nil)
           builder.add_constant(name, orig_name, value: value)
         }
+        # Add Functions
         doc['functions'].each {|name, info|
           orig_name = (info.is_a?(String) ? info : nil)
           info = (info.is_a?(Hash) ? info : nil)
@@ -31,13 +34,24 @@ module OpenGL::API
     
     private
     
-    def each_doc(&blk)
-      return unless File.file?(@path)
+    def can_apply?(doc, builder)
+      true
+    end
+    
+    def open_file(path = nil)
+      path ||= File.expand_path("../extensions/#{name}.yml", __FILE__)
+      return unless File.file?(path)
+      file = File.open(path, 'r')
       begin
-        file = File.open(@path)
-        YAML.load_documents(file, &blk)
+        yield file
       ensure
         file.close
+      end
+    end
+    
+    def each_doc(&blk)
+      open_file do |file|
+        YAML.load_documents(file, &blk)
       end
     end
     

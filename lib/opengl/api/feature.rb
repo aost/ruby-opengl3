@@ -1,42 +1,27 @@
 module OpenGL::API
   # Internal: Abstract Feature
-  class AbstractFeature
+  class AbstractFeature < Extension
     
-    private_class_method :new
     def self.[](*version)
       new(version.flatten)
     end
     
-    attr_reader :version
-    
+    private_class_method :new
     def initialize(version)
+      super(:"GL_VERSION_#{ version.join('_') }")
       @version = version
     end
     
-    def add_to(builder)
-      each_feature do |feature|
-        # compare version
-        version_cmp = (feature['version'] <=> version)
-        # skip the loop if the version is greater than you want
-        next if version_cmp > 0
-        # feed constants and functions
-        feature['constants'].each {|n| builder.add_constant(n) }
-        feature['functions'].each {|n| builder.add_function(n) }
-      end
-    end
+    attr_reader :version
     
     protected
     
-    def each_feature(filename = nil)
-      file = File.open(filename || self.filename)
-      YAML.load_documents(file) {|doc|
-        yield doc
-      }
-    ensure
-      file.close
+    def can_apply?(doc, builder)
+      # compare version
+      version_cmp = (doc['version'] <=> version)
+      # pass if the version is older than or equal to you want
+      version_cmp <= 0 && super
     end
-    
-    # override filename or each_feature
     
   end
   
