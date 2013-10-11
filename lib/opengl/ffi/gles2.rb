@@ -1,11 +1,13 @@
+require_relative 'factory'
+
 module OpenGL
   module FFI
-    # Public: OpenGL ES Module Factory
-    GLES2 = GL.dup
+    # Public: OpenGL Module Factory
+    GLES2 = Factory.new
     
-    # Internal:
-    def GLES2.api(version)
-      API::GLES2[version]
+    # Interanl:
+    def GLES2.api(builder)
+      API::GLES2[builder.context.version]
     end
     
     GLES2.freeze

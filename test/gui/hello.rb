@@ -1,7 +1,7 @@
 module Hello
   
-  def test_hello
-    m = OpenGL::FFI::GL.create
+  def test_hello(factory = OpenGL::FFI::GL)
+    m = factory.create
     extend(m)
     # singleton_class.send :include, m
     puts "GL Version: #{ glGetString(m::GL_VERSION) }"
