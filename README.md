@@ -26,7 +26,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install opengl3
+    $ gem install opengl3 --pre
 
 ## Examples
 
